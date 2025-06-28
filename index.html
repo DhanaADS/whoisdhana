@@ -53,6 +53,18 @@
     .portfolio-images img:hover {
       transform: scale(1.05);
     }
+    .about-section {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .about-section img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
     a {
       color: #00b3ff;
       text-decoration: none;
@@ -61,13 +73,16 @@
 </head>
 <body>
   <header class="hero" data-aos="fade-down">
-    <h1>Hello, I'm <span>Danzo</span></h1>
+    <h1>Hello, I'm <span>Dhana</span></h1>
     <p>Tech-Powered Freelancer | Automation | Bots | PR | Crypto</p>
   </header>
 
   <section class="about" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>I help startups and founders grow using smart tech—web scraping, PR tools, bot automation, and crypto services.</p>
+    <div class="about-section">
+      <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/Dhana.jpg" alt="Dhana">
+      <p>I help startups and founders grow using smart tech—web scraping, PR tools, bot automation, and crypto services.</p>
+    </div>
   </section>
 
   <section class="services" data-aos="fade-up">
