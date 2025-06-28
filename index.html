@@ -51,19 +51,34 @@
 
     .about {
       display: flex;
+      flex-direction: column;
+    }
+
+    .about h2 {
+      color: var(--accent);
+    }
+
+    .about-content {
+      display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 2rem;
       flex-wrap: wrap;
     }
 
     .about img {
-      width: 160px;
-      height: 160px;
-      border-radius: 10px;
+      width: 180px;
+      height: 180px;
+      border-radius: 12px;
       object-fit: cover;
     }
 
-    .skills, .contact, .footer {
+    .about-text {
+      max-width: 600px;
+      font-size: 1.2rem;
+      line-height: 1.7;
+    }
+
+    .skills, .contact {
       margin-top: 3rem;
     }
 
@@ -71,13 +86,8 @@
       color: var(--accent);
     }
 
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-
-    ul li::before {
-      content: "🔹 ";
+    .skills div {
+      margin-bottom: 0.75rem;
     }
 
     .contact a {
@@ -110,10 +120,11 @@
       border-radius: 5px;
     }
 
-    footer {
+    footer.footer {
       text-align: center;
       font-size: 0.8rem;
-      margin: 3rem 0 1rem;
+      color: var(--text);
+      padding: 2rem 1rem;
     }
   </style>
 </head>
@@ -126,41 +137,44 @@
   </header>
 
   <div class="container">
-   <section class="about">
- <h2>About Me</h2>
-<div style="display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;">
-  <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/Dhana.jpg" alt="Dhana" style="width: 180px; height: 180px; border-radius: 12px; object-fit: cover;" />
-  <div style="max-width: 600px; font-size: 1.2rem; line-height: 1.7;">
-    <p>I specialize in blending content strategy, automation, and no-code tools to power modern digital workflows.</p>
-    <p>From bots to branding, I craft systems that save time and scale results. Web scraping, PR workflows, crypto alerts — I build what moves faster than you type.</p>
-  </div>
-</div>
+    <section class="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/Dhana.jpg" alt="Dhana" />
+        <div class="about-text">
+          <p>I specialize in blending content strategy, automation, and no-code tools to power modern digital workflows.</p>
+          <p>From bots to branding, I craft systems that save time and scale results. Web scraping, PR workflows, crypto alerts — I build what moves faster than you type.</p>
+        </div>
+      </div>
+    </section>
 
     <section class="skills">
-  <h2>Skills & Tools</h2>
-  <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1rem;">
-    <div>🕸️ Web Scraping & Lead Automation</div>
-    <div>🤖 Telegram/WhatsApp Bots (Node.js)</div>
-    <div>🐍 Python Scripting & Data Tools</div>
-    <div>📈 Crypto Alert Bots & Dashboard Feeds</div>
-    <div>📝 Content Management (WordPress, Ghost)</div>
-    <div>⚡ No-code Automation (Zapier, Sheets, APIs)</div>
-  </div>
-</section>
+      <h2>Skills & Tools</h2>
+      <div>
+        <div>🕸️ Web Scraping & Lead Automation</div>
+        <div>🤖 Telegram/WhatsApp Bots (Node.js)</div>
+        <div>🐍 Python Scripting & Data Tools</div>
+        <div>📈 Crypto Alert Bots & Dashboard Feeds</div>
+        <div>📝 Content Management (WordPress, Ghost)</div>
+        <div>⚡ No-code Automation (Zapier, Sheets, APIs)</div>
+      </div>
+    </section>
 
-   <section class="contact">
-  <h2>Connect</h2>
-  <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
-    <a href="mailto:your@email.com">📧 Email</a>
-    <a href="https://t.me/yourhandle">💬 Telegram</a>
-    <a href="https://linkedin.com/in/yourlinkedin">💼 LinkedIn</a>
-    <a href="https://dhanaads.github.io/whoisdhana-linktree/">🔗 Linktree</a>
+    <section class="contact">
+      <h2>Connect</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+        <a href="mailto:your@email.com">📧 Email</a>
+        <a href="https://t.me/yourhandle">💬 Telegram</a>
+        <a href="https://linkedin.com/in/yourlinkedin">💼 LinkedIn</a>
+        <a href="https://dhanaads.github.io/whoisdhana-linktree/">🔗 Linktree</a>
+      </div>
+    </section>
   </div>
-</section>
-<footer class="footer">
-  ⚡ Powered by Dhana | Hosted on GitHub Pages
-</footer>
-  <!-- Toggle Mode Script -->
+
+  <footer class="footer">
+    ⚡ Powered by Dhana | Hosted on GitHub Pages
+  </footer>
+
   <script>
     function toggleMode() {
       const body = document.body;
@@ -170,7 +184,6 @@
     }
   </script>
 
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PRLLEHY4R2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
