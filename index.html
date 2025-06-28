@@ -63,7 +63,7 @@
       object-fit: cover;
     }
 
-    .skills, .contact, .footer {
+    .skills, .portfolio, .contact, .footer {
       margin-top: 3rem;
     }
 
@@ -103,6 +103,24 @@
       right: 15px;
       font-size: 1rem;
       cursor: pointer;
+      padding: 6px 12px;
+      background: #00bfa6;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .portfolio-images {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .portfolio-images img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 10px;
+      object-fit: cover;
     }
 
     footer {
@@ -113,7 +131,7 @@
   </style>
 </head>
 <body>
-  <div class="toggle" onclick="document.body.classList.toggle('light-mode')">🌓 Toggle</div>
+  <button class="toggle" onclick="toggleTheme()" id="themeButton">🌙 Dark Mode</button>
 
   <header>
     <h1>Hello, I'm Dhana</h1>
@@ -141,6 +159,15 @@
       </ul>
     </section>
 
+    <section class="portfolio">
+      <h2>Portfolio</h2>
+      <div class="portfolio-images">
+        <img src="https://picsum.photos/id/102/400/300" alt="Project 1" />
+        <img src="https://picsum.photos/id/104/400/300" alt="Project 2" />
+        <img src="https://picsum.photos/id/106/400/300" alt="Project 3" />
+      </div>
+    </section>
+
     <section class="contact">
       <h2>Connect</h2>
       <a href="mailto:your@email.com">📧 Email</a>
@@ -159,6 +186,16 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-PRLLEHY4R2');
+
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+      const btn = document.getElementById('themeButton');
+      if (document.body.classList.contains('light-mode')) {
+        btn.textContent = '🌞 Light Mode';
+      } else {
+        btn.textContent = '🌙 Dark Mode';
+      }
+    }
   </script>
 </body>
 </html>
