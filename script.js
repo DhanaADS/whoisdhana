@@ -1,1 +1,4 @@
-// Smooth scroll or animations can be added here
+const toggle = document.getElementById('themeToggle');
+toggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+});// Smooth scroll or animations can be added here
