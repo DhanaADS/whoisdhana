@@ -2,67 +2,163 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Who is Dhana?</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhana Portfolio</title>
+  <meta name="description" content="Tech-powered content manager, automation enthusiast, bot builder, and crypto toolmaker.">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/Dhana.jpg" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+    }
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PRLLLEHY4R2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-PRLLLEHY4R2');
-  </script>
+    :root {
+      --bg: #0d0d0d;
+      --text: #ffffff;
+      --accent: #00ffcc;
+    }
+
+    .light-mode {
+      --bg: #ffffff;
+      --text: #111111;
+      --accent: #007acc;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem 2rem;
+      background: linear-gradient(to right, #00ffc3, #0085ff);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    header p {
+      margin: 0.5rem 0 0;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .about {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .about img {
+      width: 140px;
+      height: 140px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .skills, .contact, .footer {
+      margin-top: 3rem;
+    }
+
+    h2 {
+      color: var(--accent);
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li::before {
+      content: "🔹 ";
+    }
+
+    .contact a {
+      margin: 0.5rem 0.5rem 0;
+      padding: 8px 16px;
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background: #00bfa6;
+      border-radius: 5px;
+      transition: transform 0.2s, background 0.3s;
+      font-size: 0.9rem;
+    }
+
+    .contact a:hover {
+      transform: scale(1.05);
+      background: #009e8a;
+    }
+
+    .toggle {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      margin: 3rem 0 1rem;
+    }
+  </style>
 </head>
 <body>
-  <button class="toggle-theme" onclick="toggleTheme()">🌙</button>
+  <div class="toggle" onclick="document.body.classList.toggle('light-mode')">🌓 Toggle</div>
 
   <header>
-    <h1>Hello, I'm <span class="highlight">Dhana</span></h1>
-    <p class="subtitle">Tech-Powered Content Manager | Automation | Bots | PR | Crypto</p>
+    <h1>Hello, I'm Dhana</h1>
+    <p>Tech-Powered Content Manager | Automation | Bots | PR | Crypto</p>
   </header>
 
-  <section class="intro">
-    <p>
-      I specialize in blending content strategy, automation, and no-code tools to power modern digital workflows.<br />
-      From bots to branding, I craft systems that save time and scale results. Web scraping, PR workflows, crypto alerts — I build what moves faster than you type.
-    </p>
-  </section>
+  <div class="container">
+    <section class="about">
+      <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/Dhana.jpg" alt="Dhana" />
+      <div>
+        <p>I specialize in blending content strategy, automation, and no-code tools to power modern digital workflows.</p>
+        <p>From bots to branding, I craft systems that save time and scale results. Web scraping, PR workflows, crypto alerts — I build what moves faster than you type.</p>
+      </div>
+    </section>
 
-  <section class="skills-section">
-  <h2 class="skills-title">Skills & Tools</h2>
-  <ul class="skills-list">
-    <li>🕸️ Web Scraping & Lead Automation</li>
-    <li>🤖 Telegram/WhatsApp Bots (Node.js)</li>
-    <li>🐍 Python Scripting & Data Tools</li>
-    <li>📈 Crypto Alert Bots & Dashboard Feeds</li>
-    <li>📝 Content Management (WordPress, Ghost)</li>
-    <li>⚡ No-code Automation (Zapier, Sheets, APIs)</li>
-  </ul>
-</section>
+    <section class="skills">
+      <h2>Skills & Tools</h2>
+      <ul>
+        <li>🕸️ Web Scraping & Lead Automation</li>
+        <li>🤖 Telegram/WhatsApp Bots (Node.js)</li>
+        <li>🐍 Python Scripting & Data Tools</li>
+        <li>📈 Crypto Alert Bots & Dashboard Feeds</li>
+        <li>📝 Content Management (WordPress, Ghost)</li>
+        <li>⚡ No-code Automation (Zapier, Sheets, APIs)</li>
+      </ul>
+    </section>
 
-  <section class="buttons">
-    <a href="mailto:you@example.com">📧 Email</a>
-    <a href="https://t.me/yourtelegram" target="_blank">💬 Telegram</a>
-    <a href="https://linkedin.com/in/yourprofile" target="_blank">💼 LinkedIn</a>
-    <a href="https://linktr.ee/yourlink" target="_blank">🌐 Linktree</a>
-  </section>
+    <section class="contact">
+      <h2>Connect</h2>
+      <a href="mailto:your@email.com">📧 Email</a>
+      <a href="https://t.me/yourhandle">💬 Telegram</a>
+      <a href="https://linkedin.com/in/yourlinkedin">💼 LinkedIn</a>
+      <a href="https://dhanaads.github.io/whoisdhana-linktree/">🔗 Linktree</a>
+    </section>
+  </div>
 
-  <footer>
-    ⚡ Powered by GitHub Pages | Designed by Dhana
-  </footer>
+  <footer class="footer">⚡ Powered by Dhana | Hosted on GitHub Pages</footer>
 
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PRLLEHY4R2"></script>
   <script>
-    function toggleTheme() {
-      document.body.classList.toggle("dark");
-      const btn = document.querySelector(".toggle-theme");
-      if (document.body.classList.contains("dark")) {
-        btn.textContent = "☀️";
-      } else {
-        btn.textContent = "🌙";
-      }
-    }
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PRLLEHY4R2');
   </script>
 </body>
 </html>
