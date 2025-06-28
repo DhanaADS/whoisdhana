@@ -19,60 +19,54 @@ body.dark {
 
 header {
   text-align: center;
-  margin: 20px 0 40px 0;
+  margin: 20px 0 10px;
 }
 
 h1 .highlight {
-  color: #2f80ed;
+  color: #3d7eff;
 }
 
 .subtitle {
-  margin-top: 5px;
-  font-size: 15px;
-  color: #444;
-}
-
-body.dark .subtitle {
-  color: #ccc;
+  font-size: 14px;
+  margin-top: 8px;
+  color: gray;
 }
 
 .intro {
-  max-width: 700px;
-  margin: 0 auto 40px auto;
+  max-width: 680px;
+  margin: 20px auto;
   line-height: 1.6;
   text-align: justify;
 }
 
+.skills {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.skills h2 {
+  color: #00cc66;
+  margin-bottom: 20px;
+}
+
 .skills ul {
   list-style: none;
-  text-align: center;
-  margin: 30px 0;
+  padding: 0;
 }
 
 .skills li {
   display: block;
-  margin: 10px auto;
+  margin: 12px auto;
   padding: 12px 18px;
-  max-width: 450px;
+  max-width: 400px;
   background: #ddd;
-  border-radius: 10px;
+  border-radius: 8px;
   text-align: center;
-  font-size: 16px;
-  transition: background 0.3s;
-}
-
-.skills li:not(:last-child) {
-  margin-bottom: 14px;
+  font-weight: 500;
 }
 
 body.dark .skills li {
   background: #333;
-}
-
-h2 {
-  text-align: center;
-  color: #00cc99;
-  margin-bottom: 10px;
 }
 
 .buttons {
@@ -80,7 +74,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .buttons a {
@@ -88,45 +82,36 @@ h2 {
   padding: 10px 16px;
   border-radius: 20px;
   border: 1px solid #999;
-  transition: all 0.2s ease;
-  font-size: 15px;
   background: white;
-  color: #333;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  font-size: 15px;
+  transition: all 0.2s ease;
+  box-shadow: 1px 1px 4px #ccc;
 }
 
 body.dark .buttons a {
   background: #222;
   color: #fff;
-  border-color: #555;
+  border-color: #666;
+  box-shadow: 1px 1px 4px #111;
 }
 
 .buttons a:hover {
-  transform: scale(1.07);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  transform: scale(1.05);
 }
 
 .toggle-theme {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 12px;
+  right: 12px;
   font-size: 18px;
-  border: none;
   background: none;
+  border: none;
   cursor: pointer;
 }
 
 footer {
-  margin-top: 50px;
+  margin-top: 40px;
   text-align: center;
   font-size: 14px;
-  opacity: 0.7;
-}
-
-footer span {
-  color: #999;
-}
-
-body.dark footer {
-  color: #bbb;
+  color: #888;
 }
