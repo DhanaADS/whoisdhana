@@ -103,6 +103,11 @@
       right: 15px;
       font-size: 1rem;
       cursor: pointer;
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--text);
+      padding: 6px 12px;
+      border-radius: 5px;
     }
 
     footer {
@@ -113,7 +118,7 @@
   </style>
 </head>
 <body>
-  <div class="toggle" onclick="document.body.classList.toggle('light-mode')">🌓 Toggle</div>
+  <div class="toggle" onclick="toggleMode()">🌙 Dark Mode</div>
 
   <header>
     <h1>Hello, I'm Dhana</h1>
@@ -151,6 +156,16 @@
   </div>
 
   <footer class="footer">⚡ Powered by Dhana | Hosted on GitHub Pages</footer>
+
+  <!-- Toggle Mode Script -->
+  <script>
+    function toggleMode() {
+      const body = document.body;
+      const toggle = document.querySelector('.toggle');
+      body.classList.toggle('light-mode');
+      toggle.textContent = body.classList.contains('light-mode') ? '🌞 Light Mode' : '🌙 Dark Mode';
+    }
+  </script>
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PRLLEHY4R2"></script>
