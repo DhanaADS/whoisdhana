@@ -17,56 +17,70 @@ body.dark {
   color: #fff;
 }
 
-/* Header Section */
 header {
   text-align: center;
   margin: 20px 0 40px 0;
 }
 
 h1 .highlight {
-  color: #5b5bff;
+  color: #2f80ed;
 }
 
-/* Intro */
+.subtitle {
+  margin-top: 5px;
+  font-size: 15px;
+  color: #444;
+}
+
+body.dark .subtitle {
+  color: #ccc;
+}
+
 .intro {
-  max-width: 680px;
-  margin: 20px auto;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
   line-height: 1.6;
   text-align: justify;
 }
 
-/* Skills Section */
 .skills ul {
   list-style: none;
   text-align: center;
   margin: 30px 0;
-  padding: 0;
 }
 
 .skills li {
   display: block;
-  margin: 12px auto;
+  margin: 10px auto;
   padding: 12px 18px;
-  max-width: 440px;
+  max-width: 450px;
   background: #ddd;
-  border-radius: 8px;
+  border-radius: 10px;
   text-align: center;
   font-size: 16px;
-  line-height: 1.6;
+  transition: background 0.3s;
+}
+
+.skills li:not(:last-child) {
+  margin-bottom: 14px;
 }
 
 body.dark .skills li {
   background: #333;
-  color: #fff;
 }
 
-/* Button Links */
+h2 {
+  text-align: center;
+  color: #00cc99;
+  margin-bottom: 10px;
+}
+
 .buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .buttons a {
@@ -75,47 +89,44 @@ body.dark .skills li {
   border-radius: 20px;
   border: 1px solid #999;
   transition: all 0.2s ease;
-  background: white;
   font-size: 15px;
+  background: white;
+  color: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 body.dark .buttons a {
   background: #222;
   color: #fff;
-  border-color: #666;
+  border-color: #555;
 }
 
 .buttons a:hover {
-  transform: scale(1.05);
+  transform: scale(1.07);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
-/* Theme Toggle Button */
 .toggle-theme {
   position: absolute;
   top: 10px;
   right: 10px;
-  padding: 6px 12px;
+  font-size: 18px;
   border: none;
-  background-color: #eee;
-  border-radius: 6px;
+  background: none;
   cursor: pointer;
-  font-weight: bold;
-  transition: all 0.2s ease;
 }
 
-body.dark .toggle-theme {
-  background-color: #444;
-  color: #fff;
-}
-
-/* Footer */
 footer {
   margin-top: 50px;
   text-align: center;
   font-size: 14px;
+  opacity: 0.7;
+}
+
+footer span {
   color: #999;
 }
 
 body.dark footer {
-  color: #ccc;
+  color: #bbb;
 }
