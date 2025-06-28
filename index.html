@@ -72,6 +72,25 @@
       text-align: justify;
       max-width: 600px;
     }
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .contact-buttons a {
+      background-color: #00b3ff;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      font-size: 14px;
+    }
+    .contact-buttons a:hover {
+      background-color: #0099dd;
+      transform: scale(1.05);
+    }
     a {
       color: #00b3ff;
       text-decoration: none;
@@ -117,9 +136,12 @@
 
   <section class="contact" data-aos="fade-up">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:whoisdhana@gmail.com">whoisdhana@gmail.com</a></p>
-    <p>Telegram: <a href="https://t.me/WhoisDhana">@WhoisDhana</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/whoisdhana/">linkedin.com/in/whoisdhana</a></p>
+    <div class="contact-buttons">
+      <a href="https://dhanaads.github.io/whoisdhana-linktree/" target="_blank">🔗 Linktree</a>
+      <a href="mailto:whoisdhana@gmail.com">✉️ Email</a>
+      <a href="https://t.me/WhoisDhana" target="_blank">📨 Telegram</a>
+      <a href="https://linkedin.com/in/whoisdhana/" target="_blank">💼 LinkedIn</a>
+    </div>
   </section>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
