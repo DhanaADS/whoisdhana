@@ -115,9 +115,12 @@ body.dark .buttons a {
   cursor: pointer;
 }
 
-footer {
-  margin-top: 40px;
+.footer {
   text-align: center;
-  font-size: 14px;
-  color: #888;
+  font-size: 0.9rem;
+  color: var(--text);
+  margin-top: 4rem;
+  padding: 1rem 0;
+  width: 100%;
+  clear: both;
 }
