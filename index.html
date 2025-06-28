@@ -54,15 +54,23 @@
       transform: scale(1.05);
     }
     .about-section {
-      text-align: center;
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      text-align: left;
     }
     .about-section img {
       width: 180px;
       height: 180px;
       object-fit: cover;
       border-radius: 8px;
-      display: block;
-      margin: 0 auto 20px;
+      flex-shrink: 0;
+    }
+    .about-section p {
+      text-align: justify;
+      max-width: 600px;
     }
     a {
       color: #00b3ff;
@@ -91,8 +99,8 @@
     <ul>
       <li>Web Scraping & Lead Automation</li>
       <li>Telegram/WhatsApp Bots (Node.js)</li>
-      <li>Guest Posting & Digital PR Campaigns</li>
-      <li>Crypto Alert Bots & Data Tools</li>
+      <li>Python Scripting & Data Tools</li>
+      <li>Crypto Alert Bots & Dashboard Feeds</li>
       <li>Content Management (WordPress, Ghost)</li>
       <li>No-code Automation (Zapier, Sheets, APIs)</li>
     </ul>
