@@ -1,158 +1,91 @@
-/* 🌐 LinkedIn-Inspired Dual Theme Portfolio CSS */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Segoe UI", system-ui, sans-serif;
-}
-
 :root {
-  --bg: #ffffff;
-  --text: #1d2226;
+  --bg: #1a1a1a;
+  --text: #f0f0f0;
   --accent: #0073b1;
-  --muted: #666;
-  --card-bg: #f3f6f8;
-  --btn-bg: #0073b1;
-  --btn-text: #ffffff;
+  --muted: #999;
+  --card-bg: #262626;
 }
 
-body.dark-mode {
-  --bg: #1d2226;
-  --text: #f0f2f5;
-  --accent: #70b5f9;
-  --muted: #bbb;
-  --card-bg: #2e3338;
-  --btn-bg: #70b5f9;
-  --btn-text: #1d2226;
+body.light {
+  --bg: #f4f4f4;
+  --text: #111;
+  --accent: #0a66c2;
+  --muted: #555;
+  --card-bg: #ffffff;
 }
 
 body {
-  background-color: var(--bg);
+  background: var(--bg);
   color: var(--text);
-  padding: 20px;
-  transition: background-color 0.3s, color 0.3s;
+  font-family: "Segoe UI", sans-serif;
+  padding: 2rem;
+  transition: background 0.3s, color 0.3s;
 }
 
-/* Header */
-header {
-  text-align: center;
-  margin-bottom: 30px;
-  padding: 40px 0 20px;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--accent);
-}
-
-.typed-wrap {
-  font-size: 1.2rem;
-  color: var(--muted);
-  min-height: 1.6rem;
-}
-
-/* Sections */
-.container {
-  max-width: 850px;
-  margin: auto;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-section h2 {
-  color: var(--accent);
-  margin-bottom: 16px;
-}
-
-/* About */
-.about-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
-}
-
-.about img {
-  width: 160px;
-  height: 160px;
-  border-radius: 12px;
-  object-fit: cover;
-}
-
-.about-text {
-  flex: 1;
-  line-height: 1.6;
-  font-size: 1.1rem;
-}
-
-/* Skills */
-.skills-list {
-  list-style: none;
-  padding-left: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 12px;
-}
-
-.skills-list li {
-  background: var(--card-bg);
-  padding: 12px 16px;
-  border-radius: 6px;
-  font-weight: 500;
-  transition: background 0.3s;
-}
-
-/* Contact Buttons */
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.buttons a {
-  text-decoration: none;
-  background: var(--btn-bg);
-  color: var(--btn-text);
-  padding: 10px 18px;
-  border-radius: 20px;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: background 0.2s ease;
-}
-
-.buttons a:hover {
-  opacity: 0.9;
-  transform: scale(1.03);
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  font-size: 0.85rem;
-  margin-top: 4rem;
-  color: var(--muted);
-  padding: 1rem 0;
-}
-
-/* Theme Toggle */
 .toggle-theme {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  background: none;
-  border: 2px solid var(--accent);
-  color: var(--accent);
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.9rem;
+  top: 1rem;
+  right: 1rem;
+  background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--muted);
+  padding: 6px 12px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s;
+  font-size: 14px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.toggle-theme:hover {
-  background: var(--accent);
-  color: white;
+.profile-card {
+  max-width: 320px;
+  margin: 5rem auto 2rem;
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid var(--accent);
+}
+
+.profile-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.title {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin-bottom: 0.7rem;
+}
+
+.bio {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 1.2rem;
+}
+
+.profile-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 1.3rem;
+}
+
+.profile-links a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.profile-links a:hover {
+  transform: scale(1.2);
 }
