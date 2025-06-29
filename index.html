@@ -2,50 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DhanaPal - LinkedIn Style Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dhana's LinkedIn-Inspired Portfolio</title>
   <link rel="stylesheet" href="linkedin-style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/Dhana.jpg">
 </head>
 <body>
-  <div class="container">
+
+  <div class="linkedin-layout">
+
+    <!-- Left Sidebar -->
     <aside class="sidebar">
       <div class="profile-card">
-        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/Dhana.jpg" alt="Dhana Profile" class="avatar" />
+        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/Dhana.jpg" alt="Dhana" class="avatar">
         <h2>Dhana Pal ✅</h2>
-        <p class="subtitle">Tech-Powered Growth Specialist | Web Developer | Automation</p>
-        <p class="location">📍 Coimbatore, Tamil Nadu</p>
-        <p class="org">🏢 Aggrandize Digital Solutions</p>
-        <div class="connections">Connections <span>25</span></div>
-        <button class="btn-premium">🚀 Reactivate Premium</button>
-        <ul class="sidebar-menu">
-          <li>🔖 Saved items</li>
-          <li>👥 Groups</li>
-          <li>📰 Newsletters</li>
-          <li>📅 Events</li>
-        </ul>
+        <p class="subtitle">Tech-Powered Growth Specialist | Web Developer</p>
+        <p class="location">📍 Tamil Nadu, India</p>
+        <div class="company">🏢 Aggrandize Digital Solutions</div>
+        <div class="connections">👥 25 Connections</div>
+        <div class="links">
+          <a href="mailto:whoisdhana@email.com">📧</a>
+          <a href="https://t.me/whoisdhana">💬</a>
+          <a href="https://dhanaads.github.io/whoisdhana-linktree/">🔗</a>
+        </div>
       </div>
     </aside>
 
+    <!-- Feed Section -->
     <main class="feed">
-      <div class="post-box">
-        <input type="text" placeholder="Start a post" class="post-input" />
-        <div class="post-actions">
-          <button>🎥 Video</button>
-          <button>📷 Photo</button>
-          <button>✍️ Write article</button>
-        </div>
-      </div>
-      <div class="card">
+      <div class="card about">
         <h3>About Me</h3>
         <p>I specialize in blending content strategy, automation, and no-code tools to power modern digital workflows.</p>
         <p>From bots to branding, I craft systems that save time and scale results. Web scraping, PR workflows, crypto alerts — I build what moves faster than you type.</p>
       </div>
-      <div class="card">
+
+      <div class="card skills">
         <h3>Skills & Tools</h3>
-        <ul class="skills-list">
+        <ul>
           <li>🕸️ Web Scraping & Lead Automation</li>
           <li>🤖 Telegram/WhatsApp Bots (Node.js)</li>
           <li>🐍 Python Scripting & Data Tools</li>
@@ -56,21 +49,24 @@
       </div>
     </main>
 
-    <aside class="rightbar">
-      <div class="news-card">
-        <h4>LinkedIn News</h4>
-        <ul>
-          <li>📌 China confirms US trade framework</li>
-          <li>📌 GCCs focus on upskilling</li>
-          <li>📌 How can firms retain Gen Z talent</li>
-          <li>📌 More Indians groove to live music</li>
+    <!-- Right Sidebar -->
+    <aside class="right-sidebar">
+      <div class="card">
+        <h3>LinkedIn News</h3>
+        <ul class="news-list">
+          <li>🔹 China confirms US trade framework</li>
+          <li>🔹 GCCs focus on upskilling</li>
+          <li>🔹 How can firms retain Gen Z talent</li>
+          <li>🔹 More Indians groove to live music</li>
         </ul>
       </div>
-      <div class="ad-card">
-        <p><strong>Promoted:</strong> Follow Aramco for career updates!</p>
-        <button>Follow</button>
+      <div class="card">
+        <h3>Today's Puzzle</h3>
+        <p>🧠 Zip – a quick brain teaser</p>
       </div>
     </aside>
+
   </div>
+
 </body>
 </html>
