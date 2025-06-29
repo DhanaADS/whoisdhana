@@ -20,7 +20,7 @@ body.dark {
 header {
   text-align: center;
   margin: 40px 0 20px;
-  animation: fadeIn 1.2s ease forwards;
+  animation: fadeIn 1s ease forwards;
 }
 
 h1 .highlight {
@@ -33,16 +33,27 @@ h1 .highlight {
   color: gray;
 }
 
-/* 🔤 Typing effect block */
+/* 🔤 Typing effect */
 #typed-text {
   font-weight: 500;
-  font-size: 1.1rem;
-  min-height: 1.4em;
+  font-size: 1.2rem;
+  min-height: 1.5em;
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid currentColor;
-  animation: fadeIn 1.5s ease forwards;
+}
+
+/* Fix cursor position & prevent flicker */
+.typed-cursor {
+  font-size: 1.2rem;
+  display: inline-block;
+  animation: blink 1s infinite;
+}
+
+/* Optional cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .intro {
