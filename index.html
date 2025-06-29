@@ -6,13 +6,12 @@
   <title>Dhana Portfolio</title>
   <meta name="description" content="Tech-powered content manager, automation enthusiast, bot builder, and crypto toolmaker.">
   <link rel="icon" href="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/Dhana.jpg" />
-
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: "Segoe UI", sans-serif;
+      font-family: 'Segoe UI', sans-serif;
     }
 
     :root {
@@ -25,10 +24,9 @@
       background-color: var(--bg);
       color: var(--text);
       transition: background 0.3s, color 0.3s;
-      padding-bottom: 3rem;
     }
 
-    body.light-mode {
+    .light-mode {
       --bg: #ffffff;
       --text: #111111;
       --accent: #007acc;
@@ -36,8 +34,8 @@
 
     .toggle {
       position: absolute;
-      top: 12px;
-      right: 12px;
+      top: 10px;
+      right: 15px;
       font-size: 1rem;
       cursor: pointer;
       background: var(--bg);
@@ -49,30 +47,25 @@
 
     header {
       text-align: center;
-      padding: 4rem 1rem 3rem;
+      padding: 4rem 1rem 2rem;
       background: linear-gradient(to right, #00ffc3, #0085ff);
-      color: white;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 0.5rem;
     }
 
-    #typed-text {
-      display: inline-block;
-      min-width: 320px;
-      min-height: 1.4em;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 2px solid currentColor;
-      font-size: 1.1rem;
-      animation: blink-caret 0.75s step-end infinite;
+    .typed-wrap {
+      font-size: 1.5rem;
+      font-weight: 500;
+      min-height: 2.5rem;
     }
 
-    @keyframes blink-caret {
-      from, to { border-color: transparent }
-      50% { border-color: currentColor }
+    .typed-cursor {
+      font-weight: 300;
+      font-size: 1.5rem;
+      color: white;
     }
 
     .container {
@@ -89,7 +82,6 @@
     .about {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
     }
 
     .about-content {
@@ -112,12 +104,12 @@
       line-height: 1.7;
     }
 
-    .skills div {
-      margin-bottom: 0.75rem;
-    }
-
     .skills, .contact {
       margin-top: 3rem;
+    }
+
+    .skills div {
+      margin-bottom: 0.75rem;
     }
 
     .contact a {
@@ -137,11 +129,11 @@
       background: #009e8a;
     }
 
-    footer {
+    footer.footer {
       text-align: center;
-      font-size: 0.85rem;
-      margin-top: 4rem;
+      font-size: 0.8rem;
       color: var(--text);
+      padding: 2rem 1rem;
     }
   </style>
 </head>
@@ -150,7 +142,7 @@
 
   <header>
     <h1>Hello, I'm Dhana</h1>
-    <p id="typed-text"></p>
+    <p class="typed-wrap"><span id="typed-text"></span></p>
   </header>
 
   <div class="container">
@@ -187,9 +179,27 @@
     </section>
   </div>
 
-  <footer>
+  <footer class="footer">
     ⚡ Powered by GitHub Pages | Designed by Dhana
   </footer>
+
+  <!-- Typed.js Script -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    new Typed('#typed-text', {
+      strings: [
+        'Tech-Powered Content Manager',
+        'Automation | Bots',
+        'PR | Crypto'
+      ],
+      typeSpeed: 60,
+      backSpeed: 30,
+      backDelay: 2000,
+      loop: true,
+      showCursor: true,
+      cursorChar: '|'
+    });
+  </script>
 
   <!-- Dark Mode Toggle -->
   <script>
@@ -199,24 +209,6 @@
       body.classList.toggle('light-mode');
       toggle.textContent = body.classList.contains('light-mode') ? '🌞 Light Mode' : '🌙 Dark Mode';
     }
-  </script>
-
-  <!-- Typed.js Typing Animation -->
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      new Typed("#typed-text", {
-        strings: [
-          "Tech-Powered Content Manager",
-          "Automation | Bots | PR | Crypto",
-          "Crypto Toolmaker"
-        ],
-        typeSpeed: 40,
-        backSpeed: 25,
-        backDelay: 1800,
-        loop: true
-      });
-    });
   </script>
 </body>
 </html>
