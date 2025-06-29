@@ -19,7 +19,8 @@ body.dark {
 
 header {
   text-align: center;
-  margin: 20px 0 10px;
+  margin: 40px 0 20px;
+  animation: fadeIn 1.2s ease forwards;
 }
 
 h1 .highlight {
@@ -30,6 +31,18 @@ h1 .highlight {
   font-size: 14px;
   margin-top: 8px;
   color: gray;
+}
+
+/* 🔤 Typing effect block */
+#typed-text {
+  font-weight: 500;
+  font-size: 1.1rem;
+  min-height: 1.4em;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid currentColor;
+  animation: fadeIn 1.5s ease forwards;
 }
 
 .intro {
@@ -65,13 +78,10 @@ h1 .highlight {
   border-radius: 8px;
   text-align: center;
   font-weight: 500;
+  transition: background 0.3s ease;
 }
 
 body.dark .skills-list li {
-  background: #333;
-}
-
-body.dark .skills li {
   background: #333;
 }
 
@@ -113,14 +123,28 @@ body.dark .buttons a {
   background: none;
   border: none;
   cursor: pointer;
+  z-index: 99;
 }
 
+/* ✅ Footer */
 .footer {
   text-align: center;
   font-size: 0.9rem;
-  color: var(--text);
+  color: inherit;
   margin-top: 4rem;
   padding: 1rem 0;
   width: 100%;
   clear: both;
+}
+
+/* ✨ Fade In Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
