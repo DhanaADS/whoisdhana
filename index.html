@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dhana Portfolio</title>
   <meta name="description" content="Tech-powered content manager, automation enthusiast, bot builder, and crypto toolmaker.">
-  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/Dhana.jpg" />
+  <link rel="icon" href="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/Dhana.jpg" />
+
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      transition: background 0.3s, color 0.3s;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
     }
 
     :root {
@@ -21,28 +21,58 @@
       --accent: #00ffcc;
     }
 
-    .light-mode {
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
+      padding-bottom: 3rem;
+    }
+
+    body.light-mode {
       --bg: #ffffff;
       --text: #111111;
       --accent: #007acc;
     }
 
+    .toggle {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--text);
+      padding: 6px 12px;
+      border-radius: 5px;
+    }
+
     header {
       text-align: center;
-      padding: 4rem 1rem 2rem;
+      padding: 4rem 1rem 3rem;
       background: linear-gradient(to right, #00ffc3, #0085ff);
+      color: white;
     }
 
     header h1 {
       font-size: 2.5rem;
-      margin: 0;
+      margin-bottom: 0.5rem;
     }
 
     #typed-text {
-      font-weight: 500;
+      display: inline-block;
+      min-width: 320px;
+      min-height: 1.4em;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid currentColor;
       font-size: 1.1rem;
-      display: block;
-      margin-top: 0.8rem;
+      animation: blink-caret 0.75s step-end infinite;
+    }
+
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: currentColor }
     }
 
     .container {
@@ -51,13 +81,15 @@
       padding: 1rem;
     }
 
+    h2 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
     .about {
       display: flex;
       flex-direction: column;
-    }
-
-    .about h2 {
-      color: var(--accent);
+      gap: 1.5rem;
     }
 
     .about-content {
@@ -80,16 +112,12 @@
       line-height: 1.7;
     }
 
-    .skills, .contact {
-      margin-top: 3rem;
-    }
-
-    h2 {
-      color: var(--accent);
-    }
-
     .skills div {
       margin-bottom: 0.75rem;
+    }
+
+    .skills, .contact {
+      margin-top: 3rem;
     }
 
     .contact a {
@@ -109,24 +137,11 @@
       background: #009e8a;
     }
 
-    .toggle {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 1rem;
-      cursor: pointer;
-      background: var(--bg);
-      color: var(--text);
-      border: 1px solid var(--text);
-      padding: 6px 12px;
-      border-radius: 5px;
-    }
-
-    footer.footer {
+    footer {
       text-align: center;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
+      margin-top: 4rem;
       color: var(--text);
-      padding: 2rem 1rem;
     }
   </style>
 </head>
@@ -135,7 +150,7 @@
 
   <header>
     <h1>Hello, I'm Dhana</h1>
-    <span id="typed-text"></span>
+    <p id="typed-text"></p>
   </header>
 
   <div class="container">
@@ -172,11 +187,11 @@
     </section>
   </div>
 
-  <footer class="footer">
+  <footer>
     ⚡ Powered by GitHub Pages | Designed by Dhana
   </footer>
 
-  <!-- Toggle Mode -->
+  <!-- Dark Mode Toggle -->
   <script>
     function toggleMode() {
       const body = document.body;
@@ -186,29 +201,22 @@
     }
   </script>
 
-  <!-- Typed.js -->
+  <!-- Typed.js Typing Animation -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
-    new Typed('#typed-text', {
-      strings: [
-        "Tech-Powered Content Manager",
-        "Bot Developer",
-        "PR Strategist",
-        "Crypto Toolmaker"
-      ],
-      typeSpeed: 50,
-      backSpeed: 30,
-      loop: true
+    document.addEventListener("DOMContentLoaded", function () {
+      new Typed("#typed-text", {
+        strings: [
+          "Tech-Powered Content Manager",
+          "Automation | Bots | PR | Crypto",
+          "Crypto Toolmaker"
+        ],
+        typeSpeed: 40,
+        backSpeed: 25,
+        backDelay: 1800,
+        loop: true
+      });
     });
-  </script>
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PRLLEHY4R2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-PRLLEHY4R2');
   </script>
 </body>
 </html>
