@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <title>Portfolio | LinkedIn Style</title>
+  <link rel="stylesheet" href="linkedin-style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LinkedIn Style Portfolio</title>
-  <link rel="stylesheet" href="linkedin-style.css">
 </head>
 <body>
+
+  <!-- Topbar -->
   <div class="topbar">
     <div class="logo">🔗 Portfolio</div>
     <input class="search" type="text" placeholder="Search...">
     <div class="nav-icons">
       <span>🏠</span>
-      <span>💼</span>
+      <span>📁</span>
       <span>🔔</span>
       <span>👤</span>
     </div>
   </div>
 
+  <!-- Three Column Layout -->
   <div class="layout-3col">
+
+    <!-- Left Sidebar -->
     <aside class="sidebar">
       <div class="profile-card">
         <div class="profile-banner"></div>
@@ -28,14 +33,30 @@
       </div>
     </aside>
 
+    <!-- Middle Feed -->
     <main class="feed">
-      <div class="card">About me content goes here</div>
-      <div class="card">Skills & Tools content goes here</div>
+      <div class="card">
+        <h3>About Me</h3>
+        <p>I specialize in blending content strategy, automation, and no-code tools to power modern digital workflows.</p>
+        <p>From bots to branding, I craft systems that save time and scale results. Web scraping, PR workflows, crypto alerts — I build what moves faster than you type.</p>
+      </div>
+      <div class="card">
+        <h3>Skills & Tools</h3>
+        <ul>
+          <li>🕸️ Web Scraping & Lead Automation</li>
+          <li>🤖 Telegram/WhatsApp Bots (Node.js)</li>
+          <li>🐍 Python Scripting & Data Tools</li>
+          <li>📈 Crypto Alert Bots & Dashboard Feeds</li>
+          <li>📝 Content Management (WordPress, Ghost)</li>
+          <li>⚡ No-code Automation (Zapier, Sheets, APIs)</li>
+        </ul>
+      </div>
     </main>
 
+    <!-- Right Sidebar -->
     <aside class="news">
       <div class="card">
-        <h4>Trending Topics</h4>
+        <h3>Trending Topics</h3>
         <ul>
           <li>#WebDevelopment</li>
           <li>#Automation</li>
@@ -43,8 +64,13 @@
         </ul>
       </div>
     </aside>
+
   </div>
 
-  <footer class="footer">⚡ Powered by GitHub Pages | Designed by Dhana</footer>
+  <!-- Footer -->
+  <footer class="footer">
+    ⚡ Powered by GitHub Pages | Designed by Dhana
+  </footer>
+
 </body>
 </html>
