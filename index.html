@@ -2,202 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dhana | Portfolio</title>
-  <meta name="description" content="Portfolio - Content Automation, Bots, PR, Crypto." />
-  <link rel="icon" href="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/Dhana.jpg" />
-  <style>
-    :root {
-      --bg: #f3f2ef;
-      --text: #1d2226;
-      --accent: #0073b1;
-      --card-bg: #ffffff;
-      --button-bg: #ffffff;
-      --button-border: #0073b1;
-    }
-
-    body.dark-mode {
-      --bg: #1d2226;
-      --text: #f3f2ef;
-      --accent: #70b5f9;
-      --card-bg: #2d333a;
-      --button-bg: #2d333a;
-      --button-border: #70b5f9;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    body {
-      background-color: var(--bg);
-      color: var(--text);
-      transition: background 0.3s, color 0.3s;
-      padding: 1.5rem;
-    }
-
-    .toggle-theme {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      padding: 6px 12px;
-      font-size: 0.9rem;
-      border: 1px solid var(--accent);
-      border-radius: 5px;
-      background: var(--button-bg);
-      color: var(--accent);
-      cursor: pointer;
-    }
-
-    header {
-      text-align: center;
-      padding: 3rem 1rem 2rem;
-    }
-
-    header h1 {
-      font-size: 2.6rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      color: var(--accent);
-    }
-
-    #typed-text {
-      font-size: 1.3rem;
-      min-height: 1.5rem;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 1rem;
-    }
-
-    section {
-      margin-bottom: 3rem;
-    }
-
-    h2 {
-      font-size: 1.5rem;
-      color: var(--accent);
-      margin-bottom: 1rem;
-    }
-
-    .about-content {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      align-items: flex-start;
-    }
-
-    .about-content img {
-      width: 180px;
-      height: 180px;
-      border-radius: 12px;
-      object-fit: cover;
-    }
-
-    .about-text {
-      max-width: 600px;
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
-
-    .skills-list div {
-      background: var(--card-bg);
-      padding: 10px 16px;
-      border-radius: 6px;
-      margin: 0.5rem 0;
-      max-width: 500px;
-    }
-
-    .contact a {
-      text-decoration: none;
-      margin: 0.4rem;
-      padding: 8px 16px;
-      border-radius: 5px;
-      background: var(--button-bg);
-      color: var(--accent);
-      border: 1px solid var(--button-border);
-      display: inline-block;
-      transition: 0.2s ease;
-      font-size: 0.9rem;
-    }
-
-    .contact a:hover {
-      transform: scale(1.05);
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 0.8rem;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dhana · Portfolio Card</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <button class="toggle-theme" onclick="toggleTheme()">🌙 Dark Mode</button>
 
-  <header>
-    <h1>Dhana</h1>
-    <div id="typed-text"></div>
-  </header>
+  <aside class="profile-card">
+    <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/Dhana.jpg" alt="Dhana" class="profile-pic" />
+    <h3>Dhana</h3>
+    <p class="title">Automation Strategist · Web Scraper · PR Enabler</p>
+    <p class="bio">Crafting bots, workflows, and content systems that move faster than you type.</p>
+    <div class="profile-links">
+      <a href="mailto:whoisdhana@email.com" title="Email">📧</a>
+      <a href="https://t.me/whoisdhana" title="Telegram">💬</a>
+      <a href="https://dhanaads.github.io/whoisdhana-linktree/" title="Linktree">🔗</a>
+    </div>
+  </aside>
 
-  <div class="container">
-    <section class="about">
-      <h2>About Me</h2>
-      <div class="about-content">
-        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/Dhana.jpg" alt="Dhana" />
-        <div class="about-text">
-          <p>I specialize in blending content strategy, automation, and no-code tools to power modern digital workflows.</p>
-          <p>From bots to branding, I craft systems that save time and scale results. Web scraping, PR workflows, crypto alerts — I build what moves faster than you type.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="skills">
-      <h2>Skills & Tools</h2>
-      <div class="skills-list">
-        <div>🕸️ Web Scraping & Lead Automation</div>
-        <div>🤖 Telegram/WhatsApp Bots (Node.js)</div>
-        <div>🐍 Python Scripting & Data Tools</div>
-        <div>📈 Crypto Alert Bots & Dashboard Feeds</div>
-        <div>📝 Content Management (WordPress, Ghost)</div>
-        <div>⚡ No-code Automation (Zapier, Sheets, APIs)</div>
-      </div>
-    </section>
-
-    <section class="contact">
-      <h2>Connect</h2>
-      <a href="mailto:whoisdhana@email.com">📧 Email</a>
-      <a href="https://t.me/whoisdhana">💬 Telegram</a>
-      <a href="https://dhanaads.github.io/whoisdhana-linktree/">🔗 Linktree</a>
-    </section>
-  </div>
-
-  <footer>
-    ⚡ Powered by GitHub Pages | Designed by Dhana
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
-    new Typed("#typed-text", {
-      strings: [
-        "Tech-Powered Content Manager",
-        "Automation | Bots | PR | Crypto"
-      ],
-      typeSpeed: 50,
-      backSpeed: 30,
-      backDelay: 2000,
-      loop: true,
-    });
-
     function toggleTheme() {
-      document.body.classList.toggle("dark-mode");
-      const btn = document.querySelector(".toggle-theme");
-      btn.textContent = document.body.classList.contains("dark-mode") ? "🌞 Light Mode" : "🌙 Dark Mode";
+      document.body.classList.toggle('light');
+      document.querySelector('.toggle-theme').textContent =
+        document.body.classList.contains('light') ? '🌞 Light Mode' : '🌙 Dark Mode';
     }
   </script>
 </body>
