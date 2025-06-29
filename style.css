@@ -7,14 +7,14 @@
 
 body {
   padding: 20px;
-  background-color: #404040;
+  background-color: #404040 !important;
   color: #f0f0f0;
   transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark {
-  background-color: #121212;
-  color: #fff;
+  background-color: #404040 !important;
+  color: #f0f0f0;
 }
 
 header {
