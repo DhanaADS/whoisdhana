@@ -1,4 +1,4 @@
-/* Base Reset */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +8,7 @@ body {
   font-family: "Segoe UI", sans-serif;
   background-color: #f3f2ef;
   color: #1d1d1d;
+  line-height: 1.5;
 }
 
 /* Topbar */
@@ -27,7 +28,7 @@ body {
   font-size: 20px;
 }
 .search {
-  width: 300px;
+  width: 280px;
   padding: 8px 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -48,7 +49,7 @@ body {
   padding: 0 20px;
 }
 
-/* Sidebar */
+/* Left Sidebar */
 .sidebar {
   position: relative;
 }
@@ -81,7 +82,7 @@ body {
   color: #666;
 }
 
-/* Feed */
+/* Feed Section */
 .feed {
   display: flex;
   flex-direction: column;
@@ -93,8 +94,19 @@ body {
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
+.card h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+.card ul {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+.card li {
+  margin-bottom: 8px;
+}
 
-/* News Section */
+/* Right Sidebar - News */
 .news .card {
   background: #fff;
   padding: 20px;
@@ -104,6 +116,7 @@ body {
 .news ul {
   margin-top: 10px;
   list-style: none;
+  padding-left: 0;
 }
 .news li {
   margin-bottom: 8px;
@@ -117,4 +130,20 @@ body {
   padding: 20px 10px;
   font-size: 0.9rem;
   color: #555;
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 960px) {
+  .layout-3col {
+    grid-template-columns: 1fr;
+  }
+  .sidebar,
+  .news {
+    display: none;
+  }
+  .search {
+    width: 100%;
+  }
 }
