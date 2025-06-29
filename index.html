@@ -1,64 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Danzo | LinkedIn Style</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Style Portfolio</title>
+  <link rel="stylesheet" href="linkedin-style.css">
 </head>
 <body>
-  <div class="layout-3col">
+  <div class="topbar">
+    <div class="logo">🔗 Portfolio</div>
+    <input class="search" type="text" placeholder="Search...">
+    <div class="nav-icons">
+      <span>🏠</span>
+      <span>💼</span>
+      <span>🔔</span>
+      <span>👤</span>
+    </div>
+  </div>
 
-    <!-- LEFT: Profile Sidebar -->
+  <div class="layout-3col">
     <aside class="sidebar">
       <div class="profile-card">
-        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/Dhana.jpg" alt="Dhana" class="avatar" />
-        <h2>Dhana Pal ✅</h2>
-        <p class="tagline">Tech-Powered Growth Specialist</p>
-        <p class="location">📍 Tamil Nadu, India</p>
-        <p class="org">🏢 Aggrandize Digital Solutions</p>
-        <p class="connections">👥 25 Connections</p>
-        <div class="links">
-          <a href="mailto:whoisdhana@email.com">📧</a>
-          <a href="https://t.me/whoisdhana">💬</a>
-          <a href="https://dhanaads.github.io/whoisdhana-linktree/">🔗</a>
-        </div>
+        <div class="profile-banner"></div>
+        <div class="profile-pic"></div>
+        <h3>Full Name</h3>
+        <p class="tagline">Your Role or Title</p>
       </div>
     </aside>
 
-    <!-- CENTER: Feed Section -->
     <main class="feed">
-      <section class="about">
-        <h3>About Me</h3>
-        <p>I specialize in blending content strategy, automation, and no-code tools to power modern digital workflows.</p>
-        <p>From bots to branding, I craft systems that save time and scale results. Web scraping, PR workflows, crypto alerts — I build what moves faster than you type.</p>
-      </section>
-
-      <section class="skills">
-        <h3>Skills & Tools</h3>
-        <ul>
-          <li>🕸️ Web Scraping & Lead Automation</li>
-          <li>🤖 Telegram/WhatsApp Bots (Node.js)</li>
-          <li>🐍 Python Scripting & Data Tools</li>
-          <li>📈 Crypto Alert Bots & Dashboard Feeds</li>
-          <li>📝 Content Management (WordPress, Ghost)</li>
-          <li>⚡ No-code Automation (Zapier, Sheets, APIs)</li>
-        </ul>
-      </section>
+      <div class="card">About me content goes here</div>
+      <div class="card">Skills & Tools content goes here</div>
     </main>
 
-    <!-- RIGHT: News Feed -->
     <aside class="news">
-      <h3>LinkedIn News</h3>
-      <ul>
-        <li>📌 China confirms US trade framework</li>
-        <li>📌 GCCs focus on upskilling</li>
-        <li>📌 How can firms retain Gen Z talent</li>
-        <li>📌 More Indians groove to live music</li>
-        <li>📌 Employee benefits primed for a rejig</li>
-      </ul>
+      <div class="card">
+        <h4>Trending Topics</h4>
+        <ul>
+          <li>#WebDevelopment</li>
+          <li>#Automation</li>
+          <li>#OpenToWork</li>
+        </ul>
+      </div>
     </aside>
-
   </div>
+
+  <footer class="footer">⚡ Powered by GitHub Pages | Designed by Dhana</footer>
 </body>
 </html>
