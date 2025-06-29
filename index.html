@@ -7,6 +7,18 @@
   <meta name="description" content="Tech-powered content manager, automation enthusiast, bot builder, and crypto toolmaker.">
   <link rel="icon" href="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/Dhana.jpg" />
   <style>
+    :root {
+      --bg: #404040;
+      --text: #f0f0f0;
+      --accent: #00cc66;
+    }
+
+    body.light-mode {
+      --bg: #f4f4f4;
+      --text: #111111;
+      --accent: #007acc;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -14,22 +26,10 @@
       font-family: 'Segoe UI', sans-serif;
     }
 
-    :root {
-      --bg: #0d0d0d;
-      --text: #ffffff;
-      --accent: #00ffcc;
-    }
-
     body {
       background-color: var(--bg);
       color: var(--text);
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .light-mode {
-      --bg: #ffffff;
-      --text: #111111;
-      --accent: #007acc;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     .toggle {
@@ -38,17 +38,19 @@
       right: 15px;
       font-size: 1rem;
       cursor: pointer;
-      background: var(--bg);
+      background: transparent;
       color: var(--text);
       border: 1px solid var(--text);
       padding: 6px 12px;
       border-radius: 5px;
+      z-index: 10;
     }
 
     header {
       text-align: center;
       padding: 4rem 1rem 2rem;
       background: linear-gradient(to right, #00ffc3, #0085ff);
+      color: black;
     }
 
     header h1 {
@@ -63,9 +65,16 @@
     }
 
     .typed-cursor {
-      font-weight: 300;
       font-size: 1.5rem;
-      color: white;
+      vertical-align: baseline;
+      position: relative;
+      left: 2px;
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
     }
 
     .container {
@@ -183,7 +192,6 @@
     ⚡ Powered by GitHub Pages | Designed by Dhana
   </footer>
 
-  <!-- Typed.js Script -->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
     new Typed('#typed-text', {
@@ -199,10 +207,7 @@
       showCursor: true,
       cursorChar: '|'
     });
-  </script>
 
-  <!-- Dark Mode Toggle -->
-  <script>
     function toggleMode() {
       const body = document.body;
       const toggle = document.querySelector('.toggle');
