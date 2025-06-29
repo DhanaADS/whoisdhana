@@ -38,9 +38,11 @@
       margin: 0;
     }
 
-    header p {
-      margin: 0.5rem 0 0;
+    #typed-text {
       font-weight: 500;
+      font-size: 1.1rem;
+      display: block;
+      margin-top: 0.8rem;
     }
 
     .container {
@@ -133,7 +135,7 @@
 
   <header>
     <h1>Hello, I'm Dhana</h1>
-    <p>Tech-Powered Content Manager | Automation | Bots | PR | Crypto</p>
+    <span id="typed-text"></span>
   </header>
 
   <div class="container">
@@ -174,6 +176,7 @@
     ⚡ Powered by GitHub Pages | Designed by Dhana
   </footer>
 
+  <!-- Toggle Mode -->
   <script>
     function toggleMode() {
       const body = document.body;
@@ -183,6 +186,23 @@
     }
   </script>
 
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    new Typed('#typed-text', {
+      strings: [
+        "Tech-Powered Content Manager",
+        "Bot Developer",
+        "PR Strategist",
+        "Crypto Toolmaker"
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
+    });
+  </script>
+
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PRLLEHY4R2"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
