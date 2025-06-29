@@ -3,20 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dhana Portfolio</title>
-  <meta name="description" content="Tech-powered content manager, automation enthusiast, bot builder, and crypto toolmaker.">
+  <title>Dhana | Portfolio</title>
+  <meta name="description" content="Portfolio - Content Automation, Bots, PR, Crypto." />
   <link rel="icon" href="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/Dhana.jpg" />
   <style>
     :root {
-      --bg: #404040;
-      --text: #f0f0f0;
-      --accent: #00cc66;
+      --bg: #f3f2ef;
+      --text: #1d2226;
+      --accent: #0073b1;
+      --card-bg: #ffffff;
+      --button-bg: #ffffff;
+      --button-border: #0073b1;
     }
 
-    body.light-mode {
-      --bg: #f4f4f4;
-      --text: #111111;
-      --accent: #007acc;
+    body.dark-mode {
+      --bg: #1d2226;
+      --text: #f3f2ef;
+      --accent: #70b5f9;
+      --card-bg: #2d333a;
+      --button-bg: #2d333a;
+      --button-border: #70b5f9;
     }
 
     * {
@@ -29,78 +35,64 @@
     body {
       background-color: var(--bg);
       color: var(--text);
-      transition: background-color 0.3s, color 0.3s;
+      transition: background 0.3s, color 0.3s;
+      padding: 1.5rem;
     }
 
-    .toggle {
+    .toggle-theme {
       position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 1rem;
-      cursor: pointer;
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--text);
+      top: 1rem;
+      right: 1rem;
       padding: 6px 12px;
+      font-size: 0.9rem;
+      border: 1px solid var(--accent);
       border-radius: 5px;
-      z-index: 10;
+      background: var(--button-bg);
+      color: var(--accent);
+      cursor: pointer;
     }
 
     header {
       text-align: center;
-      padding: 4rem 1rem 2rem;
-      background: linear-gradient(to right, #00ffc3, #0085ff);
-      color: black;
+      padding: 3rem 1rem 2rem;
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 2.6rem;
+      font-weight: 700;
       margin-bottom: 0.5rem;
+      color: var(--accent);
     }
 
-    .typed-wrap {
-      font-size: 1.5rem;
-      font-weight: 500;
-      min-height: 2.5rem;
-    }
-
-    .typed-cursor {
-      font-size: 1.5rem;
-      vertical-align: baseline;
-      position: relative;
-      left: 2px;
-      animation: blink 1s infinite;
-    }
-
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
+    #typed-text {
+      font-size: 1.3rem;
+      min-height: 1.5rem;
     }
 
     .container {
-      max-width: 850px;
-      margin: 2rem auto;
+      max-width: 900px;
+      margin: 0 auto;
       padding: 1rem;
     }
 
+    section {
+      margin-bottom: 3rem;
+    }
+
     h2 {
+      font-size: 1.5rem;
       color: var(--accent);
       margin-bottom: 1rem;
     }
 
-    .about {
-      display: flex;
-      flex-direction: column;
-    }
-
     .about-content {
       display: flex;
-      align-items: center;
-      gap: 2rem;
       flex-wrap: wrap;
+      gap: 2rem;
+      align-items: flex-start;
     }
 
-    .about img {
+    .about-content img {
       width: 180px;
       height: 180px;
       border-radius: 12px;
@@ -109,49 +101,48 @@
 
     .about-text {
       max-width: 600px;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       line-height: 1.7;
     }
 
-    .skills, .contact {
-      margin-top: 3rem;
-    }
-
-    .skills div {
-      margin-bottom: 0.75rem;
+    .skills-list div {
+      background: var(--card-bg);
+      padding: 10px 16px;
+      border-radius: 6px;
+      margin: 0.5rem 0;
+      max-width: 500px;
     }
 
     .contact a {
-      margin: 0.5rem 0.5rem 0;
-      padding: 8px 16px;
-      display: inline-block;
       text-decoration: none;
-      color: white;
-      background: #00bfa6;
+      margin: 0.4rem;
+      padding: 8px 16px;
       border-radius: 5px;
-      transition: transform 0.2s, background 0.3s;
+      background: var(--button-bg);
+      color: var(--accent);
+      border: 1px solid var(--button-border);
+      display: inline-block;
+      transition: 0.2s ease;
       font-size: 0.9rem;
     }
 
     .contact a:hover {
       transform: scale(1.05);
-      background: #009e8a;
     }
 
-    footer.footer {
+    footer {
       text-align: center;
+      margin-top: 3rem;
       font-size: 0.8rem;
-      color: var(--text);
-      padding: 2rem 1rem;
     }
   </style>
 </head>
 <body>
-  <div class="toggle" onclick="toggleMode()">🌙 Dark Mode</div>
+  <button class="toggle-theme" onclick="toggleTheme()">🌙 Dark Mode</button>
 
   <header>
-    <h1>Hello, I'm Dhana</h1>
-    <p class="typed-wrap"><span id="typed-text"></span></p>
+    <h1>Dhana</h1>
+    <div id="typed-text"></div>
   </header>
 
   <div class="container">
@@ -168,7 +159,7 @@
 
     <section class="skills">
       <h2>Skills & Tools</h2>
-      <div>
+      <div class="skills-list">
         <div>🕸️ Web Scraping & Lead Automation</div>
         <div>🤖 Telegram/WhatsApp Bots (Node.js)</div>
         <div>🐍 Python Scripting & Data Tools</div>
@@ -180,39 +171,33 @@
 
     <section class="contact">
       <h2>Connect</h2>
-      <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
-        <a href="mailto:whoisdhana@email.com">📧 Email</a>
-        <a href="https://t.me/whoisdhana">💬 Telegram</a>
-        <a href="https://dhanaads.github.io/whoisdhana-linktree/">🔗 Linktree</a>
-      </div>
+      <a href="mailto:whoisdhana@email.com">📧 Email</a>
+      <a href="https://t.me/whoisdhana">💬 Telegram</a>
+      <a href="https://dhanaads.github.io/whoisdhana-linktree/">🔗 Linktree</a>
     </section>
   </div>
 
-  <footer class="footer">
+  <footer>
     ⚡ Powered by GitHub Pages | Designed by Dhana
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script>
-    new Typed('#typed-text', {
+    new Typed("#typed-text", {
       strings: [
-        'Tech-Powered Content Manager',
-        'Automation | Bots',
-        'PR | Crypto'
+        "Tech-Powered Content Manager",
+        "Automation | Bots | PR | Crypto"
       ],
-      typeSpeed: 60,
+      typeSpeed: 50,
       backSpeed: 30,
       backDelay: 2000,
       loop: true,
-      showCursor: true,
-      cursorChar: '|'
     });
 
-    function toggleMode() {
-      const body = document.body;
-      const toggle = document.querySelector('.toggle');
-      body.classList.toggle('light-mode');
-      toggle.textContent = body.classList.contains('light-mode') ? '🌞 Light Mode' : '🌙 Dark Mode';
+    function toggleTheme() {
+      document.body.classList.toggle("dark-mode");
+      const btn = document.querySelector(".toggle-theme");
+      btn.textContent = document.body.classList.contains("dark-mode") ? "🌞 Light Mode" : "🌙 Dark Mode";
     }
   </script>
 </body>
