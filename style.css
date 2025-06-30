@@ -171,3 +171,11 @@ li {
   border-top: 1px solid #333;
   margin-top: 10px;
 }
+
+/* ✨ Enable Scroll for Middle Feed Column Only */
+.feed {
+  overflow-y: auto;
+  max-height: 80vh;
+  padding-right: 6px;
+  scroll-behavior: smooth;
+}
