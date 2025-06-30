@@ -29,7 +29,7 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 
-/* 🌙 Toggle */
+/* Toggle Button */
 .toggle-theme {
   position: fixed;
   top: 1rem;
@@ -44,7 +44,7 @@ body {
   z-index: 1000;
 }
 
-/* 🔲 Layout */
+/* Layout */
 .layout-3col {
   display: grid;
   grid-template-columns: 250px 1fr 250px;
@@ -54,7 +54,7 @@ body {
   padding: 0 20px;
 }
 
-/* 🧱 Card */
+/* Cards */
 .card {
   background: var(--card-bg);
   padding: 20px;
@@ -63,25 +63,21 @@ body {
   margin-bottom: 20px;
 }
 
-/* 🧑‍💼 Profile Card */
+/* Profile Card */
 .profile-card {
+  width: 100%;
   position: relative;
   text-align: center;
-  overflow: visible;
-  padding-top: 40px;
+  overflow: hidden;
 }
 
-/* 🔷 Banner */
 .profile-banner {
   height: 80px;
   background: var(--accent);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  position: relative;
-  z-index: 1;
 }
 
-/* 🖼️ Avatar */
 .profile-pic {
   width: 100px;
   height: 100px;
@@ -89,7 +85,7 @@ body {
   border: 4px solid var(--avatar-border);
   overflow: hidden;
   position: absolute;
-  top: 100%; /* ⬅️ Place at bottom of banner */
+  top: 80px; /* 💡 aligns middle of banner bottom */
   left: 50%;
   transform: translate(-50%, -50%);
   background: #ccc;
@@ -100,11 +96,10 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
   display: block;
+  border-radius: 50%;
 }
 
-/* ✍️ Name and Title */
 .profile-body {
   padding-top: 60px;
 }
@@ -119,11 +114,21 @@ body {
   color: var(--muted);
 }
 
-/* 🦶 Footer */
+/* Footer */
 .footer {
   text-align: center;
   padding: 20px 10px;
   font-size: 0.9rem;
   color: var(--muted);
   border-top: 1px solid #ccc;
+}
+
+/* Feed/News Lists */
+ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 6px;
 }
