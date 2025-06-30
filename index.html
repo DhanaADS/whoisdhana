@@ -111,7 +111,92 @@
       </ul>
     </div>
   </div>
+<!-- Add this inside the <body> just before the footer -->
 
+<!-- 🎯 CTA Banner -->
+<div class="cta-banner">
+  <h2>Let's work together!</h2>
+  <p>Whether it's automation, development, or content — I'm ready to collaborate and deliver results.</p>
+  <a href="#" class="cta-button">📩 Contact Me</a>
+</div>
+
+<!-- 🖼️ Project Carousel/Gallery -->
+<div class="card project-gallery">
+  <h3>Featured Projects</h3>
+  <div class="carousel">
+    <div class="slide">
+      <img src="https://via.placeholder.com/300x180?text=Project+1" alt="Project 1" />
+      <p>Crypto Alert Bot – WhatsApp/Telegram alerts in real-time</p>
+    </div>
+    <div class="slide">
+      <img src="https://via.placeholder.com/300x180?text=Project+2" alt="Project 2" />
+      <p>ORM Dashboard – Clean up your reputation fast!</p>
+    </div>
+    <div class="slide">
+      <img src="https://via.placeholder.com/300x180?text=Project+3" alt="Project 3" />
+      <p>Lead Scraper – Find guest post sites from Google like a pro</p>
+    </div>
+  </div>
+</div>
+
+<style>
+/* CTA Banner */
+.cta-banner {
+  background: var(--accent);
+  color: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  margin: 40px auto;
+  border-radius: 12px;
+  max-width: 960px;
+}
+.cta-banner h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.cta-banner p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.cta-button {
+  background: #fff;
+  color: var(--accent);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.cta-button:hover {
+  background: #eee;
+}
+
+/* Carousel */
+.project-gallery .carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  scroll-snap-type: x mandatory;
+  padding-top: 10px;
+}
+.project-gallery .slide {
+  flex: 0 0 300px;
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  scroll-snap-align: start;
+}
+.project-gallery .slide img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+.project-gallery .slide p {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+</style>
   <!-- Footer -->
   <div class="footer">
     ⚡ Powered by GitHub Pages | Designed by Dhana
