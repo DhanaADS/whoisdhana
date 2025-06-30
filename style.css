@@ -1,16 +1,16 @@
 :root {
   --bg: #121212;
   --text: #f0f0f0;
-  --accent: #f4c542; /* Golden title color */
-  --muted: #b0b0b0; /* Half white */
-  --card-bg: #1c1c1c; /* More dark than before */
+  --accent: #d39d06;
+  --muted: #bbbbbb;
+  --card-bg: #1e1e1e;
   --avatar-border: #ffffff;
 }
 
 body.light {
   --bg: #f4f4f4;
   --text: #111;
-  --accent: #d4a017;
+  --accent: #d39d06;
   --muted: #555;
   --card-bg: #ffffff;
   --avatar-border: #ffffff;
@@ -52,6 +52,13 @@ body {
   max-width: 1200px;
   margin: 80px auto 40px;
   padding: 0 20px;
+  height: calc(100vh - 120px);
+}
+
+/* Scrollable Feed */
+.feed {
+  overflow-y: auto;
+  padding-right: 10px;
 }
 
 /* Cards */
@@ -61,6 +68,10 @@ body {
   border-radius: 10px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
   margin-bottom: 20px;
+}
+
+.card h3 {
+  color: var(--accent);
 }
 
 /* Profile Card */
@@ -73,7 +84,7 @@ body {
 
 .profile-banner {
   height: 80px;
-  background: var(--accent);
+  background: #4a4c4e;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -124,7 +135,7 @@ body {
   border-top: 1px solid #333;
 }
 
-/* Feed/News Lists */
+/* Lists */
 ul {
   margin-top: 10px;
   padding-left: 20px;
@@ -132,10 +143,9 @@ ul {
 
 li {
   margin-bottom: 6px;
-  color: var(--text);
 }
 
-/* 🔥 LinkedIn-style Post Cards */
+/* Post Card */
 .post-card {
   background: var(--card-bg);
   padding: 16px;
