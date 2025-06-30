@@ -3,170 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dhana | LinkedIn Style Portfolio</title>
+  <title>Dhana | Project Posts</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .tick-icon {
-      width: 16px;
-      height: 16px;
-      vertical-align: middle;
-      margin-left: 5px;
+    :root {
+      --bg: #121212;
+      --text: #f0f0f0;
+      --accent: #d39d06;
+      --muted: #aaa;
+      --card-bg: #1e1e1e;
+      --avatar-border: #ffffff;
     }
-    .profile-body .location {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-top: 6px;
-    }
-    .profile-body .buttons {
-      margin-top: 12px;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .profile-body .buttons button {
-      padding: 6px 14px;
-      border: none;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .open-btn { background: var(--accent); color: #fff; }
-    .connect-btn { background: #444; color: #fff; }
-    .more-btn {
-      background: transparent;
+
+    body {
+      background: var(--bg);
       color: var(--text);
-      border: 1px solid var(--muted);
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 20px;
     }
 
     .post-card {
       background: var(--card-bg);
-      padding: 16px;
+      padding: 20px;
       border-radius: 12px;
-      margin-bottom: 20px;
-      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+      margin-bottom: 24px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .post-card img {
+
+    .post-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--avatar-border);
+    }
+
+    .post-user {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin: 0;
+    }
+
+    .post-sub {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .post-text {
+      font-size: 0.95rem;
+      margin: 10px 0 12px;
+    }
+
+    .post-card img.post-image {
       width: 100%;
       max-height: 300px;
       object-fit: cover;
-      border-radius: 10px;
+      border-radius: 8px;
       margin-bottom: 10px;
     }
-    .post-meta {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.92rem;
-      margin-bottom: 8px;
-    }
+
     .reactions {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 18px;
       font-size: 0.88rem;
       color: var(--muted);
-      padding-top: 6px;
+      padding-top: 8px;
       border-top: 1px solid #333;
-      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-  <button class="toggle-theme" onclick="toggleTheme()">🌙</button>
-  <div class="layout-3col">
-    <div class="card profile-card">
-      <div class="profile-banner"></div>
-      <div class="profile-pic">
-        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/Dhana.jpg" alt="Dhana" />
-      </div>
-      <div class="profile-body">
-        <h3>I am Dhana 
-          <svg class="tick-icon" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="12" fill="#0A66C2"/>
-            <path d="M7 13l3 3 7-7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </h3>
-        <p class="title">🔹 Tech-Powered Growth Specialist | Web Developer | Content Manager | Automation & Crypto Tools Expert</p>
-        <p class="location">Coimbatore, Tamil Nadu, India • <a href="#" style="color: var(--accent); text-decoration: none;">Contact Info</a></p>
-        <div class="buttons">
-          <button class="open-btn">Open to</button>
-          <button class="connect-btn">Connect</button>
-          <button class="more-btn">More</button>
-        </div>
+
+  <!-- Post 1 -->
+  <div class="post-card">
+    <div class="post-header">
+      <img class="avatar" src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/avatar1.png" alt="Crypto Bot Avatar" />
+      <div>
+        <h4 class="post-user">Crypto Alert Bot</h4>
+        <p class="post-sub">Node.js • Baileys • DexScreener</p>
       </div>
     </div>
-
-    <div class="feed">
-      <div class="card">
-        <h3>About Me</h3>
-        <p>I specialize in blending content strategy, automation, and no-code tools to power modern digital workflows.</p>
-        <p>From bots to branding, I craft systems that save time and scale results. Web scraping, PR workflows, crypto alerts — I build what moves faster than you type.</p>
-      </div>
-
-      <div class="card">
-        <h3>Skills & Tools</h3>
-        <ul>
-          <li>❄️ Web Scraping & Lead Automation</li>
-          <li>🤖 Telegram/WhatsApp Bots (Node.js)</li>
-          <li>🐍 Python Scripting & Data Tools</li>
-          <li>📈 Crypto Alert Bots & Dashboard Feeds</li>
-          <li>📝 Content Management (WordPress, Ghost)</li>
-          <li>⚡ No-code Automation (Zapier, Sheets, APIs)</li>
-        </ul>
-      </div>
-
-      <!-- POST 1 -->
-      <div class="post-card">
-          <h3>Crypto Alert Bot • Node.js, Baileys, DexScreener</h3>
-          <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/1.png" alt="Crypto Alert Bot" />
-          <p><strong>Real-time WhatsApp/Telegram alerts using Node.js + DexScreener API</strong></p>
-           <div class="reactions">🔥 48 • 💬 11 • 🔁 3</div>
-      </div>
-
-      <!-- POST 2 -->
-      <div class="post-card">
-            <h3>ORM Dashboard • Puppeteer, Firebase</h3>
-            <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/2.png" alt="ORM Dashboard" />
-            <p><strong>Automated bad press cleanup panel with Google de-indexing tools</strong></p>
-            <div class="reactions">💼 32 • 💬 5 • ❤️ 7</div>
-      </div>
-
-      <!-- POST 3 -->
-      <div class="post-card">
-            <h3>Lead Scraper • Puppeteer, Ubersuggest</h3>
-            <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/3.png" alt="Lead Scraper" />
-           <p><strong>Google dork-based guest post finder with DA & traffic metrics</strong></p>
-          <div class="reactions">📊 67 • 💬 9 • 🔗 4</div>
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Trends</h3>
-      <ul>
-        <li>#WebDevelopment</li>
-        <li>#Automation</li>
-        <li>#OpenToWork</li>
-        <li>#TechTools</li>
-        <li>#NodeJS</li>
-      </ul>
-    </div>
+    <p class="post-text"><strong>Real-time WhatsApp/Telegram alerts using Node.js + DexScreener API</strong></p>
+    <img class="post-image" src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/1.png" alt="Crypto Alert Bot" />
+    <div class="reactions">👍 48 • 💬 11 • 🔁 3</div>
   </div>
 
-  <div class="footer">
-    ⚡ Powered by GitHub Pages | Designed by Dhana
+  <!-- Post 2 -->
+  <div class="post-card">
+    <div class="post-header">
+      <img class="avatar" src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/avatar2.png" alt="ORM Avatar" />
+      <div>
+        <h4 class="post-user">ORM Dashboard</h4>
+        <p class="post-sub">Puppeteer • Firebase • Ghost</p>
+      </div>
+    </div>
+    <p class="post-text"><strong>Automated bad press cleanup panel with Google de-indexing tools</strong></p>
+    <img class="post-image" src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/2.png" alt="ORM Dashboard" />
+    <div class="reactions">💼 32 • 💬 5 • ❤️ 7</div>
   </div>
 
-  <script>
-    function toggleTheme() {
-      const body = document.body;
-      const toggle = document.querySelector('.toggle-theme');
-      body.classList.toggle('light');
-      toggle.textContent = body.classList.contains('light') ? '🌙' : '☀️';
-    }
-  </script>
+  <!-- Post 3 -->
+  <div class="post-card">
+    <div class="post-header">
+      <img class="avatar" src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/main/avatar3.png" alt="Lead Scraper Avatar" />
+      <div>
+        <h4 class="post-user">Lead Scraper</h4>
+        <p class="post-sub">Puppeteer • Ubersuggest • Google Sheets</p>
+      </div>
+    </div>
+    <p class="post-text"><strong>Google dork-based guest post finder with DA & traffic metrics</strong></p>
+    <img class="post-image" src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/3.png" alt="Lead Scraper" />
+    <div class="reactions">📊 67 • 💬 9 • 🔗 4</div>
+  </div>
+
 </body>
 </html>
