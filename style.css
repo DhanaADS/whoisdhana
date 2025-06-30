@@ -59,6 +59,7 @@ body {
 .feed {
   overflow-y: auto;
   padding-right: 10px;
+  scrollbar-width: thin;
 }
 
 /* Cards */
@@ -71,7 +72,7 @@ body {
 }
 
 .card h3 {
-  color: #d39d06; /* golden title */
+  color: var(--accent);
   font-size: 1.1rem;
   margin-bottom: 12px;
 }
@@ -79,7 +80,7 @@ body {
 .card p {
   line-height: 1.6;
   font-size: 1rem;
-  text-align: left;
+  text-align: justify;
 }
 
 /* Profile Card */
@@ -153,7 +154,7 @@ li {
   margin-bottom: 6px;
 }
 
-/* Post Card */
+/* Post Card Layout */
 .post-card {
   background: var(--card-bg);
   padding: 16px;
@@ -162,24 +163,61 @@ li {
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
 }
 
+.post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.post-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.post-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+.post-info .name {
+  font-weight: bold;
+  color: var(--text);
+}
+
+.post-info .meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.post-card h3 {
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
 .post-card img {
   width: 100%;
   max-height: 300px;
   object-fit: cover;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin: 10px 0;
 }
 
-.post-meta {
-  font-size: 0.8rem;
-  color: var(--muted);
-  margin-bottom: 8px;
-}
-
-.post-card h3 {
-  font-size: 1rem;
-  color: var(--accent);
+.post-card p {
+  font-size: 0.95rem;
   margin-bottom: 10px;
+  text-align: justify;
+  line-height: 1.5;
 }
 
 .reactions {
