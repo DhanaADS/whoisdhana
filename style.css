@@ -59,7 +59,11 @@ body {
 .feed {
   overflow-y: auto;
   padding-right: 10px;
-  scrollbar-width: thin;
+  scrollbar-width: none;        /* Firefox */
+}
+
+.feed::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari */
 }
 
 /* Cards */
