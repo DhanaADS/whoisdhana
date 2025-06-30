@@ -3,14 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LinkedIn Style Portfolio</title>
+  <title>Dhana | LinkedIn Style Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <style>
     .tick-icon {
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       vertical-align: middle;
-      margin-left: 6px;
+      margin-left: 5px;
+    }
+    .profile-body .location {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+    .profile-body .buttons {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .profile-body .buttons button {
+      padding: 6px 14px;
+      border: none;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .open-btn {
+      background: var(--accent);
+      color: #fff;
+    }
+    .connect-btn {
+      background: #444;
+      color: #fff;
+    }
+    .more-btn {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--muted);
     }
   </style>
 </head>
@@ -18,9 +51,9 @@
   <!-- 🌙/☀️ Theme Toggle -->
   <button class="toggle-theme" onclick="toggleTheme()">🌙</button>
 
-  <!-- 🔲 Layout -->
+  <!-- Layout -->
   <div class="layout-3col">
-    <!-- 🧑‍💼 Profile Card -->
+    <!-- Profile Card -->
     <div class="card profile-card">
       <div class="profile-banner"></div>
       <div class="profile-pic">
@@ -29,15 +62,23 @@
       <div class="profile-body">
         <h3>
           I am Dhana
-          <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/2705.png" alt="Verified" class="tick-icon" />
+          <!-- ✅ Inline SVG tick mark -->
+          <svg class="tick-icon" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="12" fill="#0A66C2"/>
+            <path d="M7 13l3 3 7-7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </h3>
-        <p class="title">
-          🔹 Tech-Powered Growth Specialist | Web Developer | Content Manager | Automation & Crypto Tools Expert
-        </p>
+        <p class="title">🔹 Tech-Powered Growth Specialist | Web Developer | Content Manager | Automation & Crypto Tools Expert</p>
+        <p class="location">Coimbatore, Tamil Nadu, India • <a href="#" style="color: var(--accent); text-decoration: none;">Contact Info</a></p>
+        <div class="buttons">
+          <button class="open-btn">Open to</button>
+          <button class="connect-btn">Connect</button>
+          <button class="more-btn">More</button>
+        </div>
       </div>
     </div>
 
-    <!-- 📄 Feed Section -->
+    <!-- Feed -->
     <div class="feed">
       <div class="card">
         <h3>About Me</h3>
@@ -58,7 +99,7 @@
       </div>
     </div>
 
-    <!-- 📰 Trends Sidebar -->
+    <!-- Trends -->
     <div class="card">
       <h3>Trends</h3>
       <ul>
@@ -71,12 +112,12 @@
     </div>
   </div>
 
-  <!-- ⚡ Footer -->
+  <!-- Footer -->
   <div class="footer">
     ⚡ Powered by GitHub Pages | Designed by Dhana
   </div>
 
-  <!-- JS: Theme Toggle -->
+  <!-- Script -->
   <script>
     function toggleTheme() {
       const body = document.body;
