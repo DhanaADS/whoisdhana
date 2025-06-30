@@ -45,15 +45,79 @@
       color: var(--text);
       border: 1px solid var(--muted);
     }
+
+    /* CTA Banner */
+    .cta-banner {
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 30px 20px;
+      margin: 40px auto;
+      border-radius: 12px;
+      max-width: 960px;
+    }
+    .cta-banner h2 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+    .cta-banner p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+    .cta-button {
+      background: #fff;
+      color: var(--accent);
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .cta-button:hover {
+      background: #eee;
+    }
+
+    /* Project Carousel */
+    .project-carousel {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding: 10px 0;
+    }
+    .project {
+      flex: 0 0 250px;
+      background: var(--card-bg);
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+    }
+    .project img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+    .project h4 {
+      margin-bottom: 6px;
+      font-size: 1rem;
+      color: var(--text);
+    }
+    .project p {
+      font-size: 0.9rem;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .project span {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
   </style>
 </head>
 <body>
-  <!-- 🌙/☀️ Theme Toggle -->
   <button class="toggle-theme" onclick="toggleTheme()">🌙</button>
 
-  <!-- Layout -->
   <div class="layout-3col">
-    <!-- Profile Card -->
     <div class="card profile-card">
       <div class="profile-banner"></div>
       <div class="profile-pic">
@@ -62,7 +126,6 @@
       <div class="profile-body">
         <h3>
           I am Dhana
-          <!-- ✅ Inline SVG tick mark -->
           <svg class="tick-icon" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="12" r="12" fill="#0A66C2"/>
             <path d="M7 13l3 3 7-7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -78,7 +141,6 @@
       </div>
     </div>
 
-    <!-- Feed -->
     <div class="feed">
       <div class="card">
         <h3>About Me</h3>
@@ -99,7 +161,6 @@
       </div>
     </div>
 
-    <!-- Trends -->
     <div class="card">
       <h3>Trends</h3>
       <ul>
@@ -111,105 +172,44 @@
       </ul>
     </div>
   </div>
-<!-- Add this inside the <body> just before the footer -->
+
+  <!-- 🖼️ Project Carousel/Gallery -->
+  <div class="card">
+    <h3>Featured Projects</h3>
+    <div class="project-carousel">
+      <div class="project">
+        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/1.png" alt="Crypto Bot" />
+        <h4>Crypto Alert Bot</h4>
+        <p>Real-time WhatsApp/Telegram alerts using Node.js + DexScreener API</p>
+        <span>⚙️ Node.js, Baileys, CoinGecko API</span>
+      </div>
+      <div class="project">
+        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/2.png" alt="ORM Dashboard" />
+        <h4>ORM Dashboard</h4>
+        <p>Automated bad press cleanup panel with Google de-indexing tools</p>
+        <span>⚙️ Puppeteer, Firebase, Ghost</span>
+      </div>
+      <div class="project">
+        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/3.png" alt="Lead Scraper" />
+        <h4>Lead Scraper</h4>
+        <p>Google dork-based guest post finder with DA & traffic metrics</p>
+        <span>⚙️ Puppeteer, Ubersuggest, Sheets API</span>
+      </div>
+    </div>
+  </div>
 
 <!-- 🎯 CTA Banner -->
-<div class="cta-banner">
-  <h2>Let's work together!</h2>
-  <p>Whether it's automation, development, or content — I'm ready to collaborate and deliver results.</p>
-  <a href="#" class="cta-button">📩 Contact Me</a>
-</div>
+  <div class="cta-banner">
+    <h2>Let's work together!</h2>
+    <p>Whether it's automation, development, or content — I'm ready to collaborate and deliver results.</p>
+    <a href="#" class="cta-button">📩 Contact Me</a>
+  </div>
 
-<!-- 🖼️ Project Carousel/Gallery -->
-<div class="card projects">
-  <h3>Featured Projects</h3>
-  <div class="project-carousel">
-    
-    <div class="project">
-      <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/1.png" alt="Crypto Bot" />
-      <h4>Crypto Alert Bot</h4>
-      <p>Real-time WhatsApp/Telegram alerts using Node.js + DexScreener API</p>
-      <span>⚙️ Node.js, Baileys, CoinGecko API</span>
-    </div>
-
-    <div class="project">
-      <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/2.png" alt="ORM Dashboard" />
-      <h4>ORM Dashboard</h4>
-      <p>Automated bad press cleanup panel with Google de-indexing tools</p>
-      <span>⚙️ Puppeteer, Firebase, Ghost</span>
-    </div>
-
-    <div class="project">
-      <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/3.png" alt="Lead Scraper" />
-      <h4>Lead Scraper</h4>
-      <p>Google dork-based guest post finder with DA & traffic metrics</p>
-      <span>⚙️ Puppeteer, Ubersuggest, Sheets API</span>
-    </div>
-
-<style>
-/* CTA Banner */
-.cta-banner {
-  background: var(--accent);
-  color: #fff;
-  text-align: center;
-  padding: 30px 20px;
-  margin: 40px auto;
-  border-radius: 12px;
-  max-width: 960px;
-}
-.cta-banner h2 {
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-.cta-banner p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-}
-.cta-button {
-  background: #fff;
-  color: var(--accent);
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-.cta-button:hover {
-  background: #eee;
-}
-
-/* Carousel */
-.project-gallery .carousel {
-  display: flex;
-  overflow-x: auto;
-  gap: 16px;
-  scroll-snap-type: x mandatory;
-  padding-top: 10px;
-}
-.project-gallery .slide {
-  flex: 0 0 300px;
-  background: var(--card-bg);
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  scroll-snap-align: start;
-}
-.project-gallery .slide img {
-  width: 100%;
-  border-radius: 6px;
-  margin-bottom: 8px;
-}
-.project-gallery .slide p {
-  font-size: 0.9rem;
-  color: var(--text);
-}
-</style>
   <!-- Footer -->
   <div class="footer">
     ⚡ Powered by GitHub Pages | Designed by Dhana
   </div>
 
-  <!-- Script -->
   <script>
     function toggleTheme() {
       const body = document.body;
