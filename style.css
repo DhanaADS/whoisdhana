@@ -71,7 +71,15 @@ body {
 }
 
 .card h3 {
-  color: var(--accent);
+  color: #d39d06; /* golden title */
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.card p {
+  line-height: 1.6;
+  font-size: 1rem;
+  text-align: left;
 }
 
 /* Profile Card */
