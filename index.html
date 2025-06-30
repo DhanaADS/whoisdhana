@@ -32,91 +32,46 @@
       cursor: pointer;
       transition: background 0.3s;
     }
-    .open-btn {
-      background: var(--accent);
-      color: #fff;
-    }
-    .connect-btn {
-      background: #444;
-      color: #fff;
-    }
+    .open-btn { background: var(--accent); color: #fff; }
+    .connect-btn { background: #444; color: #fff; }
     .more-btn {
       background: transparent;
       color: var(--text);
       border: 1px solid var(--muted);
     }
 
-    /* CTA Banner */
-    .cta-banner {
-      background: var(--accent);
-      color: #fff;
-      text-align: center;
-      padding: 30px 20px;
-      margin: 40px auto;
-      border-radius: 12px;
-      max-width: 960px;
-    }
-    .cta-banner h2 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-    }
-    .cta-banner p {
-      font-size: 1rem;
-      margin-bottom: 15px;
-    }
-    .cta-button {
-      background: #fff;
-      color: var(--accent);
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: background 0.3s;
-    }
-    .cta-button:hover {
-      background: #eee;
-    }
-
-    /* Project Carousel */
-    .project-carousel {
-      display: flex;
-      gap: 20px;
-      overflow-x: auto;
-      padding: 10px 0;
-    }
-    .project {
-      flex: 0 0 250px;
+    .post-card {
       background: var(--card-bg);
-      border-radius: 10px;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     }
-    .project img {
+    .post-card img {
       width: 100%;
-      height: auto;
-      border-radius: 8px;
+      border-radius: 10px;
       margin-bottom: 10px;
     }
-    .project h4 {
-      margin-bottom: 6px;
-      font-size: 1rem;
-      color: var(--text);
-    }
-    .project p {
-      font-size: 0.9rem;
-      color: var(--text);
-      margin-bottom: 6px;
-    }
-    .project span {
+    .post-meta {
       font-size: 0.8rem;
       color: var(--muted);
+      margin-bottom: 8px;
+    }
+    .reactions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      margin-top: 10px;
+      color: var(--muted);
+    }
+    .reaction-emoji {
+      font-size: 1.1rem;
     }
   </style>
 </head>
 <body>
   <button class="toggle-theme" onclick="toggleTheme()">🌙</button>
-
   <div class="layout-3col">
     <div class="card profile-card">
       <div class="profile-banner"></div>
@@ -124,13 +79,7 @@
         <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/Dhana.jpg" alt="Dhana" />
       </div>
       <div class="profile-body">
-        <h3>
-          I am Dhana
-          <svg class="tick-icon" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="12" fill="#0A66C2"/>
-            <path d="M7 13l3 3 7-7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </h3>
+        <h3>I am Dhana <svg class="tick-icon" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="12" fill="#0A66C2"/><path d="M7 13l3 3 7-7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></h3>
         <p class="title">🔹 Tech-Powered Growth Specialist | Web Developer | Content Manager | Automation & Crypto Tools Expert</p>
         <p class="location">Coimbatore, Tamil Nadu, India • <a href="#" style="color: var(--accent); text-decoration: none;">Contact Info</a></p>
         <div class="buttons">
@@ -159,6 +108,28 @@
           <li>⚡ No-code Automation (Zapier, Sheets, APIs)</li>
         </ul>
       </div>
+
+      <div class="post-card">
+        <div class="post-meta">Crypto Alert Bot • Node.js, Baileys, DexScreener</div>
+        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/1.png" alt="Crypto Alert Bot" />
+        <p><strong>Real-time WhatsApp/Telegram alerts using Node.js + DexScreener API</strong></p>
+        <div class="reactions">🔥 48 • 💬 11 • 🔁 3</div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-meta">ORM Dashboard • Puppeteer, Firebase</div>
+        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/2.png" alt="ORM Dashboard" />
+        <p><strong>Automated bad press cleanup panel with Google de-indexing tools</strong></p>
+        <div class="reactions">💼 32 • 💬 5 • ❤️ 7</div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-meta">Lead Scraper • Puppeteer, Ubersuggest</div>
+        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/3.png" alt="Lead Scraper" />
+        <p><strong>Google dork-based guest post finder with DA & traffic metrics</strong></p>
+        <div class="reactions">📊 67 • 💬 9 • 🔗 4</div>
+      </div>
+
     </div>
 
     <div class="card">
@@ -173,39 +144,6 @@
     </div>
   </div>
 
-  <!-- 🖼️ Project Carousel/Gallery -->
-  <div class="card">
-    <h3>Featured Projects</h3>
-    <div class="project-carousel">
-      <div class="project">
-        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/1.png" alt="Crypto Bot" />
-        <h4>Crypto Alert Bot</h4>
-        <p>Real-time WhatsApp/Telegram alerts using Node.js + DexScreener API</p>
-        <span>⚙️ Node.js, Baileys, CoinGecko API</span>
-      </div>
-      <div class="project">
-        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/2.png" alt="ORM Dashboard" />
-        <h4>ORM Dashboard</h4>
-        <p>Automated bad press cleanup panel with Google de-indexing tools</p>
-        <span>⚙️ Puppeteer, Firebase, Ghost</span>
-      </div>
-      <div class="project">
-        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/3.png" alt="Lead Scraper" />
-        <h4>Lead Scraper</h4>
-        <p>Google dork-based guest post finder with DA & traffic metrics</p>
-        <span>⚙️ Puppeteer, Ubersuggest, Sheets API</span>
-      </div>
-    </div>
-  </div>
-
-<!-- 🎯 CTA Banner -->
-  <div class="cta-banner">
-    <h2>Let's work together!</h2>
-    <p>Whether it's automation, development, or content — I'm ready to collaborate and deliver results.</p>
-    <a href="#" class="cta-button">📩 Contact Me</a>
-  </div>
-
-  <!-- Footer -->
   <div class="footer">
     ⚡ Powered by GitHub Pages | Designed by Dhana
   </div>
