@@ -1,16 +1,16 @@
 :root {
-  --bg: #1a1a1a;
+  --bg: #121212;
   --text: #f0f0f0;
-  --accent: #0073b1;
-  --muted: #999;
-  --card-bg: #262626;
+  --accent: #f4c542; /* Golden title color */
+  --muted: #b0b0b0; /* Half white */
+  --card-bg: #1c1c1c; /* More dark than before */
   --avatar-border: #ffffff;
 }
 
 body.light {
   --bg: #f4f4f4;
   --text: #111;
-  --accent: #0a66c2;
+  --accent: #d4a017;
   --muted: #555;
   --card-bg: #ffffff;
   --avatar-border: #ffffff;
@@ -107,6 +107,7 @@ body {
 .profile-body h3 {
   font-size: 1.4rem;
   margin-top: 0.5rem;
+  color: var(--accent);
 }
 
 .title {
@@ -120,7 +121,7 @@ body {
   padding: 20px 10px;
   font-size: 0.9rem;
   color: var(--muted);
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #333;
 }
 
 /* Feed/News Lists */
@@ -131,6 +132,7 @@ ul {
 
 li {
   margin-bottom: 6px;
+  color: var(--text);
 }
 
 /* 🔥 LinkedIn-style Post Cards */
@@ -170,12 +172,4 @@ li {
   padding-top: 6px;
   border-top: 1px solid #333;
   margin-top: 10px;
-}
-
-/* ✨ Enable Scroll for Middle Feed Column Only */
-.feed {
-  overflow-y: auto;
-  max-height: 80vh;
-  padding-right: 6px;
-  scroll-behavior: smooth;
 }
