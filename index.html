@@ -4,18 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LinkedIn Style Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     :root {
       --bg-color: #f3f2ef;
       --text-color: #1d1d1d;
       --card-bg: #ffffff;
+      --accent: #0a66c2;
     }
 
     body.dark {
       --bg-color: #1a1a1a;
       --text-color: #f0f0f0;
       --card-bg: #262626;
+      --accent: #0073b1;
     }
 
     * {
@@ -93,15 +94,42 @@
     }
 
     .profile-card {
-      text-align: center;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .profile-banner {
+      height: 80px;
+      background: var(--accent);
+      position: relative;
     }
 
     .profile-pic {
-      width: 80px;
-      height: 80px;
+      width: 100px;
+      height: 100px;
       background: #ccc;
       border-radius: 50%;
-      margin: 0 auto 10px;
+      border: 4px solid var(--card-bg);
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .profile-body {
+      padding-top: 60px;
+      text-align: center;
+    }
+
+    .profile-body h3 {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+      color: gray;
+      margin-top: 0.2rem;
     }
 
     .feed ul {
@@ -135,9 +163,12 @@
   <div class="layout-3col">
     <!-- Left Sidebar -->
     <div class="card profile-card">
+      <div class="profile-banner"></div>
       <div class="profile-pic"></div>
-      <h3>Full Name</h3>
-      <p class="tagline">Your Role or Title</p>
+      <div class="profile-body">
+        <h3>Full Name</h3>
+        <p class="tagline">Your Role or Title</p>
+      </div>
     </div>
 
     <!-- Feed -->
