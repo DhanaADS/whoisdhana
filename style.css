@@ -59,6 +59,12 @@ body {
 .feed {
   overflow-y: auto;
   padding-right: 10px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.feed::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 /* Cards */
