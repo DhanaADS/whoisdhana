@@ -78,16 +78,20 @@
 <body>
   <!-- Sticky Header -->
 <header class="top-navbar">
-  <div class="nav-left">
-    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="Logo" />
-    <span>Dhana</span>
+  <div class="topbar-left">
+    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="topbar-logo" />
+    <span class="topbar-title">Dhana</span>
   </div>
-  <nav class="nav-right">
-    <a href="#">Home</a>
-    <a href="#">Projects</a>
-    <a href="#">Blog</a>
-    <a href="#">Contact</a>
-  </nav>
+
+  <div class="topbar-right">
+    <nav class="topbar-menu">
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </nav>
+    <button class="toggle-theme">🌙</button>
+  </div>
 </header>
   
   <button class="toggle-theme" onclick="toggleTheme()">🌙</button>
