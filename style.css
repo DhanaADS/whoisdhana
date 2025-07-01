@@ -37,38 +37,42 @@ body {
   background: var(--card-bg);
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 24px;
   border-bottom: 1px solid #333;
   z-index: 999;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
-/* Left Side: Logo + Title + Menu + Toggle */
+/* Left: logo + name */
 .topbar-left {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 10px;
 }
 
-/* Logo */
 .topbar-logo {
   width: 24px;
   height: 24px;
   border-radius: 4px;
 }
 
-/* Title */
 .topbar-title {
   font-size: 1rem;
   font-weight: 600;
   color: var(--text);
 }
 
-/* Nav Menu */
+/* Right: menu + toggle */
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .topbar-menu {
   display: flex;
-  gap: 18px;
-  margin-left: 20px;
+  gap: 20px;
 }
 
 .topbar-menu a {
@@ -82,9 +86,8 @@ body {
   color: var(--accent);
 }
 
-/* Theme Toggle */
+/* Toggle Theme Button */
 .toggle-theme {
-  margin-left: 20px;
   background: transparent;
   color: var(--text);
   border: 1px solid var(--muted);
