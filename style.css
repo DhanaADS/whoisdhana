@@ -29,7 +29,6 @@ body {
   transition: background 0.3s, color 0.3s;
 }
 /* Sticky Top Header */
-/* Navbar Container */
 .top-navbar {
   position: fixed;
   top: 0;
@@ -37,15 +36,15 @@ body {
   height: 56px;
   background: var(--card-bg);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 0 24px;
   border-bottom: 1px solid #333;
   z-index: 999;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
-/* Left: Logo + Name */
+/* Left Section */
 .topbar-left {
   display: flex;
   align-items: center;
@@ -64,10 +63,16 @@ body {
   color: var(--text);
 }
 
-/* Right: Menu + Toggle */
-.topbar-menu {
+/* Right Section */
+.topbar-right {
   display: flex;
   align-items: center;
+  gap: 20px;
+}
+
+/* Nav Menu */
+.topbar-menu {
+  display: flex;
   gap: 20px;
 }
 
@@ -82,6 +87,7 @@ body {
   color: var(--accent);
 }
 
+/* Toggle Button */
 .toggle-theme {
   background: transparent;
   color: var(--text);
@@ -90,20 +96,6 @@ body {
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
-}
-/* Toggle Button */
-.toggle-theme {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background: var(--card-bg);
-  color: var(--text);
-  border: 1px solid var(--muted);
-  padding: 6px 10px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  z-index: 1000;
 }
 
 /* Layout */
