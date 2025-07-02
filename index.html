@@ -76,25 +76,22 @@
   </style>
 </head>
 <body>
- <!-- Sticky Header -->
-<header class="top-navbar">
-  <div class="topbar-left">
-    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="topbar-logo" />
-    <span class="topbar-title">Dhana</span>
-  </div>
+ <header class="top-navbar">
+  <div class="header-container">  <div class="header-left-nav"> <nav class="topbar-menu">
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+        <label class="switch">
+          <input type="checkbox" id="themeToggle" onclick="toggleTheme()" />
+          <span class="slider"></span>
+        </label>
+      </nav>
+    </div>
 
-  <div class="topbar-right">
-    <nav class="topbar-menu">
-      <a href="#">Home</a>
-      <a href="#">Projects</a>
-      <a href="#">Blog</a>
-      <a href="#">Contact</a>
-      <!-- Switch-style toggle -->
-      <label class="switch">
-        <input type="checkbox" id="themeToggle" onclick="toggleTheme()" />
-        <span class="slider"></span>
-      </label>
-    </nav>
+    <div class="header-right-branding"> <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="topbar-logo" />
+      <span class="topbar-title">Dhana</span>
+    </div>
   </div>
 </header>
 
@@ -140,8 +137,7 @@
         </ul>
       </div>
 
-     <!-- POST 1 -->
-<div class="post-card">
+     <div class="post-card">
   <div style="display: flex; align-items: center; margin-bottom: 10px;">
     <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/a1.png" alt="Avatar" style="width: 50px; height: 50px; border-radius: 8px; object-fit: cover; margin-right: 10px;" />
     <div>
@@ -154,7 +150,6 @@
   <div class="reactions">🔥 48 • 💬 11 • 🔁 3</div>
 </div>
 
-<!-- POST 2 -->
 <div class="post-card">
   <div style="display: flex; align-items: center; margin-bottom: 10px;">
     <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/a2.png" alt="Avatar" style="width: 50px; height: 50px; border-radius: 8px; object-fit: cover; margin-right: 10px;" />
@@ -168,7 +163,6 @@
   <div class="reactions">💼 32 • 💬 5 • ❤️ 7</div>
 </div>
 
-<!-- POST 3 -->
 <div class="post-card">
   <div style="display: flex; align-items: center; margin-bottom: 10px;">
     <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/a3.png" alt="Avatar" style="width: 50px; height: 50px; border-radius: 8px; object-fit: cover; margin-right: 10px;" />
