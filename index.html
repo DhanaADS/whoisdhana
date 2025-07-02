@@ -77,23 +77,30 @@
 </head>
 <body>
  <header class="top-navbar">
-  <div class="header-container">  <div class="header-left-nav"> <nav class="topbar-menu">
+  <div class="header-container">
+    <!-- Branding Left -->
+    <div class="header-left-branding">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="topbar-logo" />
+      <span class="topbar-title">Dhana</span>
+    </div>
+
+    <!-- Navigation + Toggle Right -->
+    <div class="header-right-nav">
+      <nav class="topbar-menu">
         <a href="#">Home</a>
         <a href="#">Projects</a>
         <a href="#">Blog</a>
         <a href="#">Contact</a>
+        <!-- Toggle Switch -->
         <label class="switch">
           <input type="checkbox" id="themeToggle" onclick="toggleTheme()" />
           <span class="slider"></span>
         </label>
       </nav>
     </div>
-
-    <div class="header-right-branding"> <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="topbar-logo" />
-      <span class="topbar-title">Dhana</span>
-    </div>
   </div>
 </header>
+
 
   <div class="layout-3col">
     <div class="card profile-card">
