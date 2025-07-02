@@ -90,6 +90,7 @@ body {
   gap: 15px;
   align-items: center;
   justify-content: flex-end; /* ✅ push all menu items to the right */
+   margin-right: 12px;
 }
 
 .topbar-menu a {
