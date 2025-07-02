@@ -76,7 +76,7 @@
   </style>
 </head>
 <body>
-  <!-- Sticky Header -->
+ <!-- Sticky Header -->
 <header class="top-navbar">
   <div class="topbar-left">
     <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="topbar-logo" />
@@ -89,8 +89,12 @@
       <a href="#">Projects</a>
       <a href="#">Blog</a>
       <a href="#">Contact</a>
-    <button class="toggle-theme" onclick="toggleTheme()">🌙</button>
-        </nav>
+      <!-- Switch-style toggle -->
+      <label class="switch">
+        <input type="checkbox" id="themeToggle" onclick="toggleTheme()" />
+        <span class="slider"></span>
+      </label>
+    </nav>
   </div>
 </header>
 
