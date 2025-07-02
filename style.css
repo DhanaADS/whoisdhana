@@ -61,7 +61,8 @@ body {
 .header-left-branding {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px; /* 🔁 was 10px, increased spacing */
+  margin-left: 10px; /* 🔁 added extra push left */
 }
 
 .topbar-logo {
@@ -79,13 +80,16 @@ body {
 /* Right Nav + Toggle */
 .header-right-nav {
   display: flex;
+  justify-content: flex-end; /* ✅ align fully right */
   align-items: center;
+  flex: 1;
 }
 
 .topbar-menu {
   display: flex;
   gap: 20px;
   align-items: center;
+  justify-content: flex-end; /* ✅ push all menu items to the right */
 }
 
 .topbar-menu a {
