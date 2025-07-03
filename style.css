@@ -405,3 +405,69 @@ li {
 .switch input:checked + .slider::before {
   transform: translateX(20px);
 }
+/* ========== IMPROVED READABILITY PATCH ========== */
+
+/* Make text slightly larger and line spacing better */
+.card p,
+.card ul li,
+.profile-body .title,
+.profile-body .location {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Increase spacing between cards */
+.card {
+  margin-bottom: 28px;
+  padding: 24px;
+}
+
+/* Add padding inside trends card */
+.trends-card ul {
+  padding-left: 18px;
+  line-height: 1.7;
+}
+
+/* Bold section headings */
+.card h3,
+.trends-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+}
+
+/* Slight spacing boost in topbar links */
+.topbar-menu a {
+  padding: 4px 8px;
+}
+
+/* Adjust profile name spacing */
+.profile-body h3 {
+  font-size: 1.5rem;
+  margin-top: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Adjust location line spacing */
+.profile-body .location {
+  margin-bottom: 10px;
+}
+
+/* Add breathing room on mobile */
+@media (max-width: 768px) {
+  .card {
+    padding: 18px;
+  }
+
+  .profile-body h3 {
+    font-size: 1.3rem;
+  }
+
+  .card p,
+  .card ul li {
+    font-size: 0.95rem;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
+}
