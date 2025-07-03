@@ -471,3 +471,51 @@ li {
     font-size: 1.1rem;
   }
 }
+/* ==== FINAL READABILITY FIX (About + Skills) ==== */
+
+.card p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  letter-spacing: 0.2px;
+  color: var(--text);
+}
+
+.card ul li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  padding-left: 6px;
+  margin-bottom: 10px;
+}
+
+.card ul {
+  padding-left: 20px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.profile-body .title {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.trends-card ul li {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .card p,
+  .card ul li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .card h3 {
+    font-size: 1.05rem;
+  }
+}
