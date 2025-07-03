@@ -39,7 +39,6 @@
       color: var(--text);
       border: 1px solid var(--muted);
     }
-
     .post-card {
       background: var(--card-bg);
       padding: 16px;
@@ -76,31 +75,26 @@
   </style>
 </head>
 <body>
- <header class="top-navbar">
-  <div class="header-container">
-    <!-- Branding Left -->
-    <div class="header-left-branding">
-      <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/portfolio.png" alt="LinkedIn" class="topbar-logo" />
-      <span class="topbar-title">Portfolio</span>
+  <header class="top-navbar">
+    <div class="header-container">
+      <div class="header-left-branding">
+        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/portfolio.png" alt="LinkedIn" class="topbar-logo" />
+        <span class="topbar-title">Portfolio</span>
+      </div>
+      <div class="header-right-nav">
+        <nav class="topbar-menu">
+          <a href="#">Home</a>
+          <a href="#">Projects</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+          <label class="switch">
+            <input type="checkbox" id="themeToggle" onclick="toggleTheme()" />
+            <span class="slider"></span>
+          </label>
+        </nav>
+      </div>
     </div>
-
-    <!-- Navigation + Toggle Right -->
-    <div class="header-right-nav">
-      <nav class="topbar-menu">
-        <a href="#">Home</a>
-        <a href="#">Projects</a>
-        <a href="#">Blog</a>
-        <a href="#">Contact</a>
-        <!-- Toggle Switch -->
-        <label class="switch">
-          <input type="checkbox" id="themeToggle" onclick="toggleTheme()" />
-          <span class="slider"></span>
-        </label>
-      </nav>
-    </div>
-  </div>
-</header>
-
+  </header>
 
   <div class="layout-3col">
     <div class="card profile-card">
@@ -115,7 +109,7 @@
             <path d="M7 13l3 3 7-7" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </h3>
-        <p class="title">🔹 Tech-Powered Growth Specialist | Web Developer | Content Manager | Automation & Crypto Tools Expert</p>
+        <p class="title">🔹 Web Automation Engineer | Data Extraction Specialist | No-Code Ops | Growth Strategist</p>
         <p class="location">Coimbatore, Tamil Nadu, India • <a href="#" style="color: var(--accent); text-decoration: none;">Contact Info</a></p>
         <div class="buttons">
           <button class="open-btn">Open to</button>
@@ -128,60 +122,66 @@
     <div class="feed">
       <div class="card">
         <h3>About Me</h3>
-        <p>I specialize in blending content strategy, automation, and no-code tools to power modern digital workflows.</p>
-        <p>From bots to branding, I craft systems that save time and scale results. Web scraping, PR workflows, crypto alerts — I build what moves faster than you type.</p>
+        <p>I'm Dhana, a tech-powered builder focused on simplifying complex digital tasks through automation, scraping, and system design. With a strong background in Web Development, Data Extraction, and Workflow Automation, I build smart tools that save time and scale outcomes.</p>
+        <p>I work with startups, agencies, and solo founders to create bots, dashboards, scrapers, and backend logic that eliminate manual effort and boost productivity. If it involves repetitive digital tasks — I can automate it.</p>
       </div>
 
       <div class="card">
         <h3>Skills & Tools</h3>
         <ul>
-          <li>❄️ Web Scraping & Lead Automation</li>
-          <li>🤖 Telegram/WhatsApp Bots (Node.js)</li>
-          <li>🐍 Python Scripting & Data Tools</li>
-          <li>📈 Crypto Alert Bots & Dashboard Feeds</li>
-          <li>📝 Content Management (WordPress, Ghost)</li>
-          <li>⚡ No-code Automation (Zapier, Sheets, APIs)</li>
+          <li>⚙️ Web Scraping (Node.js, Puppeteer, Python, BeautifulSoup)</li>
+          <li>📲 Telegram / WhatsApp Bots (Baileys, Telegram API)</li>
+          <li>📊 Real-Time Crypto Alerts & Dashboards (DexScreener, Helius, CoinGecko API)</li>
+          <li>🧠 Automation with Google Sheets, Zapier, APIs</li>
+          <li>🔍 SEO Research & Lead Generation Tools (Ubersuggest, SimilarWeb, Google Dorks)</li>
+          <li>🖥️ Frontend & Backend (HTML/CSS, JavaScript, Firebase, GitHub Pages)</li>
         </ul>
       </div>
 
-     <div class="post-card">
-  <div style="display: flex; align-items: center; margin-bottom: 10px;">
-    <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/a1.png" alt="Avatar" style="width: 50px; height: 50px; border-radius: 8px; object-fit: cover; margin-right: 10px;" />
-    <div>
-      <h3 style="margin: 0; font-size: 1rem; color: #d39d06;">Crypto Alert Bot</h3>
-      <div class="post-meta">Node.js • Baileys • DexScreener</div>
-    </div>
-  </div>
-  <p><strong>Real-time WhatsApp/Telegram alerts using Node.js + DexScreener API</strong></p>
-  <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/1.png" alt="Crypto Alert" />
-  <div class="reactions">🔥 48 • 💬 11 • 🔁 3</div>
-</div>
+      <div class="post-card">
+        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+          <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/a1.png" alt="Avatar" style="width: 50px; height: 50px; border-radius: 8px; object-fit: cover; margin-right: 10px;" />
+          <div>
+            <h3 style="margin: 0; font-size: 1rem; color: #d39d06;">Crypto Alert Bot</h3>
+            <div class="post-meta">Node.js • Baileys • DexScreener</div>
+          </div>
+        </div>
+        <p><strong>Real-time WhatsApp/Telegram alerts for Solana tokens using Node.js + CoinGecko/DexScreener APIs</strong></p>
+        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/1.png" alt="Crypto Alert" />
+        <div class="reactions">🔥 48 • 💬 11 • 🔁 3</div>
+      </div>
 
-<div class="post-card">
-  <div style="display: flex; align-items: center; margin-bottom: 10px;">
-    <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/a2.png" alt="Avatar" style="width: 50px; height: 50px; border-radius: 8px; object-fit: cover; margin-right: 10px;" />
-    <div>
-      <h3 style="margin: 0; font-size: 1rem; color: #d39d06;">ORM Dashboard</h3>
-      <div class="post-meta">Puppeteer • Firebase</div>
-    </div>
-  </div>
-  <p><strong>Automated bad press cleanup panel with Google de-indexing tools</strong></p>
-  <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/2.png" alt="ORM Tool" />
-  <div class="reactions">💼 32 • 💬 5 • ❤️ 7</div>
-</div>
+      <div class="post-card">
+        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+          <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/a2.png" alt="Avatar" style="width: 50px; height: 50px; border-radius: 8px; object-fit: cover; margin-right: 10px;" />
+          <div>
+            <h3 style="margin: 0; font-size: 1rem; color: #d39d06;">ORM Dashboard</h3>
+            <div class="post-meta">Puppeteer • Firebase</div>
+          </div>
+        </div>
+        <p><strong>Automated bad press cleanup panel with Google de-indexing tools, powered by Puppeteer and Firebase</strong></p>
+        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/2.png" alt="ORM Tool" />
+        <div class="reactions">💼 32 • 💬 5 • ❤️ 7</div>
+      </div>
 
-<div class="post-card">
-  <div style="display: flex; align-items: center; margin-bottom: 10px;">
-    <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/a3.png" alt="Avatar" style="width: 50px; height: 50px; border-radius: 8px; object-fit: cover; margin-right: 10px;" />
-    <div>
-      <h3 style="margin: 0; font-size: 1rem; color: #d39d06;">Lead Scraper</h3>
-      <div class="post-meta">Puppeteer • Ubersuggest</div>
-    </div>
-  </div>
-  <p><strong>Google dork-based guest post finder with DA & traffic metrics</strong></p>
-  <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/3.png" alt="Lead Scraper" />
-  <div class="reactions">📊 67 • 💬 9 • 🔗 4</div>
-</div>
+      <div class="post-card">
+        <div style="display: flex; align-items: center; margin-bottom: 10px;">
+          <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/a3.png" alt="Avatar" style="width: 50px; height: 50px; border-radius: 8px; object-fit: cover; margin-right: 10px;" />
+          <div>
+            <h3 style="margin: 0; font-size: 1rem; color: #d39d06;">Lead Scraper</h3>
+            <div class="post-meta">Puppeteer • Ubersuggest</div>
+          </div>
+        </div>
+        <p><strong>Domain scraper that finds guest post sites with traffic, DA, Google News status using Puppeteer + Ubersuggest</strong></p>
+        <img src="https://raw.githubusercontent.com/DhanaADS/whoisdhana/refs/heads/main/3.png" alt="Lead Scraper" />
+        <div class="reactions">📊 67 • 💬 9 • 🔗 4</div>
+      </div>
+
+      <div class="card">
+        <h3>Let's Work Together</h3>
+        <p>If you're looking for automation, scraping, or workflow tools — let's talk. I’m available for freelance gigs, collaboration, or part-time opportunities.</p>
+        <p><a href="mailto:dhanads.work@gmail.com" style="color: var(--accent);">📩 dhanads.work@gmail.com</a></p>
+      </div>
     </div>
 
     <div class="card trends-card">
@@ -197,7 +197,7 @@
   </div>
 
   <div class="footer">
-    ⚡ Powered by GitHub Pages | Designed by Dhana
+    ⚡ Powered by GitHub Pages | Portfolio crafted with 💡 by Dhana | Available for Freelance & Remote Projects
   </div>
 
   <script>
