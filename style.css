@@ -293,6 +293,17 @@ li {
 .switch input:checked + .slider {
   background-color: var(--accent);
 }
+/* Limit profile card height like LinkedIn */
+.profile-card {
+  max-height: 430px; /* adjust between 400–450px as per preference */
+  overflow: hidden;
+}
+
+/* Limit trends card height (right panel) */
+.trends-card {
+  max-height: 300px;
+  overflow: hidden;
+}
 
 .switch input:checked + .slider::before {
   transform: translateX(20px);
