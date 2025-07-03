@@ -474,6 +474,7 @@ li {
 /* ==== FINAL READABILITY FIX (About + Skills) ==== */
 
 .card p {
+  text-align: justify;
   font-size: 1.05rem;
   line-height: 1.75;
   letter-spacing: 0.2px;
